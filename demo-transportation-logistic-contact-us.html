@@ -368,7 +368,7 @@
 									<thead>
 									  <tr>
 										<th>Address</th>
-										<th>Email</th>
+										<th>City</th>
 										<th>Contact</th>
 									  </tr>
 									</thead>
@@ -583,16 +583,17 @@ for (let i = 0; i < city.length; i++) {
 	})
 }
 const add=[
-	    {address:"Plot No. 120, Transport Nagar, Ludhiana",email:"-",contact:"-"},
-        {address:"Plot No. 21, Transport Nagar, Jahajgarh, Amritsar",         email:"-",contact:"-"},
-		{address:"Near Ramada Hotel, Ambala Chandigarh Highway, Zirakpur.",   email:"-",contact:"-"},
-		{address:"Gagan Chowk Bye-Pass, NH-1, Rajpura",                       email:"-",contact:"-"},
-		{address:"Plot No. 10, Transport Area, Sector -26, Chandigarh",       email:"-",contact:"-"},
-		{address:"4144-45, Naya Bazar, Delhi",                                email:"-",contact:"-"},
-		{address:"AG-16, Sanjay Gandhi Transport Nagar, Delh",                email:"-",contact:"-"},
-		{address:"Shop No. 6, CSC Market, Punjabi Bagh Transport Area, Delhi",email:"-",contact:"-"},
-		{address:"Kundli Border, Near Canara Bank, Kundli",                   email:"-",contact:"-"},
-		{address:"Pillar No. 692, Opposite Metro, Old Faridabad",             email:"-",contact:"-"},
+	    {address:"Plot No. 120, Transport Nagar, Ludhiana",                   city:"Ludhiana",contact:"7888529411"},
+        {address:"Plot No. 21, Transport Nagar, Jahajgarh, Amritsar",         city:"Amritsar",contact:"9417422577"},
+		{address:"Near Ramada Hotel, Ambala Chandigarh Highway, Zirakpur.",   city:"Zirakpur",contact:"8968421077"},
+		{address:"Gagan Chowk Bye-Pass, NH-1, Rajpura",                       city:"Rajpura", contact:"9417282699"},
+		{address:"Plot No. 10, Transport Area, Sector-26, Chandigarh",        city:"Chandigarh",contact:"9417191006"},
+		{address:"4144-45, Naya Bazar, Delhi",                                city:"Delhi",   contact:"7011719699"},
+		{address:"AG-16, Sanjay Gandhi Transport Nagar, Delh",                city:"Delhi",   contact:"9899656120"},
+		{address:"Shop No. 6, CSC Market, Punjabi Bagh Transport Area, Delhi",city:"Delhi",   contact:"7011719699"},
+		{address:"Kundli Border, Near Canara Bank, Kundli",                   city:"Kundali",   contact:"9306735473"},
+		{address:"Pillar No. 692, Opposite Metro, Old Faridabad",             city:"Faridabad",   contact:"9818691997"},
+		{address:"Gee Mandi, Near Shhvalavir Van",                            city:"Amritsar",   contact:"9417422577"},
 	]
 let give=[]
 
@@ -613,7 +614,7 @@ let give=[]
 	console.log("bye");
 
  give=add.map((i)=>{
-	if(i.address.includes((inputField.value).toLowerCase()) || i.address.includes((inputField.value)) ){
+	if(i.city.includes((inputField.value).toLowerCase()) || i.city.includes((inputField.value)) ){
 		console.log("hi");
 		return(i)
 	}
@@ -630,7 +631,7 @@ let give=[]
 	newElement.style.height="40px"
 	newElement.innerHTML +=`
 		                        <td width="550px">${i.address}</td>
-								<td>${i.email}</td>
+								<td>${i.city}</td>
 								<td>${i.contact}</td>
 						  `
 				addr.appendChild(newElement)
