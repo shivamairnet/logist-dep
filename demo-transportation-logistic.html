@@ -295,9 +295,16 @@
 					</div>
 				</section>
 
+				<section class="section border-0 bg-light mt-3 p-0">
+					<div class="container py-5 mt-2">
+						<span id="counter" style="font-weight: bold; font-size: 40px;  color: #16b5f5;" >0 </span><span style="font-weight: bold; font-size: 40px;color: #16b5f5 ">+</span><span style="font-weight: bold; font-size: 35px; color: black;"> Cities</span>
+						<span id="counter2" style="font-weight: bold; font-size: 40px; color: #16b5f5; margin-left: 20px;">0</span><span style="font-weight: bold; font-size: 40px;color: #16b5f5; ">,000+ </span><span style="font-weight: bold; font-size: 35px; color: black;">Costumers</span>
+					</div>
+				</section>
+
 
 				<section class="border-0 section-intro">
-					<div class="container py-5 mt-2">
+					<div class="container py-5">
 						<div class="row mt-4">
 							<div class="col-lg-5">
 								<p class="custom-drop-caps font-weight-medium text-4"><span class="custom-drop-caps-number text-color-dark negative-ls-1"><span class="d-inline-block appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="0">35</span></span> years in business. Decades of expertise, innovation, growth, resilience, adaptability, trust, industry leadership.</p>
@@ -744,7 +751,30 @@
 			*/
 
 			// Map Markers
-			
+			var counterElement = document.getElementById("counter");
+			var counterElement2 = document.getElementById("counter2");
+    var count = 0;
+    var count2 = 0;
+    var interval = setInterval(function() {
+        if (count <= 25 ) {
+            counterElement.textContent = count;
+            counterElement2.textContent = count2;
+            count++;
+            count2++;
+        } else {
+            clearInterval(interval);
+        }
+    }, 100);
+	var interval2 = setInterval(function() {
+        if (count2 <= 54 ) {
+         
+            counterElement2.textContent = count2;
+            
+            count2++;
+        } else {
+            clearInterval(interval2);
+        }
+    }, 100);
 
 		</script>
 
