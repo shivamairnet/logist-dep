@@ -237,9 +237,11 @@
                                
                                 
                                 <div class="row">
-                                    <div class="form-group col mb-0">
+                                    <div class="form-group col mb-0 d-flex">
+										
                                         <input onclick="show()" type="text" class="px-4" id="inputField"  style="width: 80%; height: 50px;" placeholder="Search Cities">
-										<button onclick="filt()" class="btn btn-tertiary border-0 text-3 font-weight-semi-bold btn-px-5  d-none d-md-inline-block"  style="height: 50px;">Search</button>
+										<button onclick="filt()" class="btn btn-tertiary border-0 text-3 font-weight-semi-bold btn-px-5   d-md-inline-block"  style="height: 50px;">Search</button>
+									
                                     </div>
 									
                                 </div>
@@ -472,11 +474,12 @@ for (let i = 0; i < city.length; i++) {
 	const newElement = document.createElement('div');
 	newElement.textContent = city[i]
 	newElement.classList.add('city');
+	
 	hiddenDiv.appendChild(newElement);
 	newElement.addEventListener("click",()=>{
 		inputField.value=city[i]
 		console.log(inputField.value);
-		hiddenDiv.style.display="none"
+		hiddenDiv.style.display="none" 
 	})
 }
 const add=[
