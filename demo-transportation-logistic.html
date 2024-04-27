@@ -297,8 +297,10 @@
 
 				<section class="section border-0 bg-light mt-3 p-0">
 					<div class="container py-5 mt-2">
-						<span id="counter" style="font-weight: bold; font-size: 40px;  color: #16b5f5;" >0 </span><span style="font-weight: bold; font-size: 40px;color: #16b5f5 ">+</span><span style="font-weight: bold; font-size: 35px; color: black;"> Cities</span>
-						<span id="counter2" style="font-weight: bold; font-size: 40px; color: #16b5f5; margin-left: 20px;">0</span><span style="font-weight: bold; font-size: 40px;color: #16b5f5; ">,000+ </span><span style="font-weight: bold; font-size: 35px; color: black;">Costumers</span>
+						<span id="counter" style="font-weight: bold; font-size: 35px;  color: #16b5f5;" >0 </span><span style="font-weight: bold; font-size: 35px;color: #16b5f5 ">+</span><span style="font-weight: bold; font-size: 27px; color: black;">Agencies</span>
+						<span id="counter2" style="font-weight: bold; font-size: 35px; color: #16b5f5; margin-left: 20px;">0</span><span style="font-weight: bold; font-size: 35px;color: #16b5f5; ">,000+ </span><span style="font-weight: bold; font-size: 27px; color: black;">Cities</span>
+						<span id="counter3" style="font-weight: bold; font-size: 35px; color: #16b5f5; margin-left: 20px;">0</span><span style="font-weight: bold; font-size: 35px;color: #16b5f5; ">,000+ </span><span style="font-weight: bold; font-size: 27px; color: black;">Years</span>
+						<span id="counter4" style="font-weight: bold; font-size: 35px; color: #16b5f5; margin-left: 20px;">0</span><span style="font-weight: bold; font-size: 35px;color: #16b5f5; ">,000+ </span><span style="font-weight: bold; font-size: 27px; color: black;">Logistics Fleet</span>
 					</div>
 				</section>
 
@@ -711,7 +713,7 @@
 						<hr class="bg-color-light opacity-1">
 						<div class="row">
 							<div class="col mt-4 mb-4 pb-4">
-								<p class="text-center text-3 mb-0 text-color-grey">Porto Transportation & Logistic © 2023. All Rights Reserved.</p>
+								<p class="text-center text-3 mb-0 text-color-grey">The Bharat Transport Pvt Ltd © 2024. All Rights Reserved.</p>
 							</div>
 						</div>
 					</div>
@@ -753,20 +755,24 @@
 			// Map Markers
 			var counterElement = document.getElementById("counter");
 			var counterElement2 = document.getElementById("counter2");
+			var counterElement3 = document.getElementById("counter3");
+			var counterElement4 = document.getElementById("counter4");
     var count = 0;
     var count2 = 0;
+    var count3 = 0;
+    var count4 = 0;
     var interval = setInterval(function() {
-        if (count <= 25 ) {
+        if (count <= 150 ) {
             counterElement.textContent = count;
-            counterElement2.textContent = count2;
+           
             count++;
-            count2++;
+           
         } else {
             clearInterval(interval);
         }
-    }, 100);
+    }, 25);
 	var interval2 = setInterval(function() {
-        if (count2 <= 54 ) {
+        if (count2 <= 10 ) {
          
             counterElement2.textContent = count2;
             
@@ -774,7 +780,29 @@
         } else {
             clearInterval(interval2);
         }
+    }, 200);
+	var interval3 = setInterval(function() {
+        if (count3 <= 50 ) {
+         
+            counterElement3.textContent = count3;
+            
+            count3++;
+        } else {
+            clearInterval(interval3);
+        }
     }, 100);
+	var interval4 = setInterval(function() {
+        if (count4 <= 50 ) {
+         
+            counterElement4.textContent = count4;
+            
+            count4++;
+        } else {
+            clearInterval(interval4);
+        }
+    }, 100);
+
+
 
 		</script>
 
