@@ -414,9 +414,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="form-group col mb-0">
-                                        <button type="submit" onclick="give()" class="btn btn-tertiary border-0 text-3 font-weight-semi-bold btn-px-5 btn-py-3 d-none d-md-inline-block" data-loading-text="Loading...">Send Message</button>
-                                    </div>
+                                   
                                 </div>
                             </form>
 							<button  onclick="givee()" id="tt" class="btn btn-tertiary border-0 text-3 font-weight-semi-bold btn-px-5 btn-py-3 d-none d-md-inline-block" data-loading-text="Loading...">Send Message</button>
@@ -572,7 +570,7 @@
 postData('http://localhost:3000/send-email',data)
   }
 
-let city=["delhi", "Mumbai", "Ludhiana", "Gurgaon", "Amritsar", "Jalandhar"]
+let city=["Delhi", "Amritsar", "Ludhiana", "Chandigarh", "Kundli", "Zirakpur","Faridabad"]
 for (let i = 0; i < city.length; i++) {
 	const newElement = document.createElement('div');
 	newElement.textContent = city[i]
@@ -584,7 +582,18 @@ for (let i = 0; i < city.length; i++) {
 		hiddenDiv.style.display="none"
 	})
 }
-const add=[{address:"31 delhi",email:"dnfjkdhsj@gmail.com",contact:"7846785"},{address:"41 ludhiana",email:"dnfjkdhsj@gmail.com",contact:"7846785"},{address:"52 goa",email:"dnfjkdhsj@gmail.com",contact:"7846785"},{address:"37 delhi",email:"dnfjkdhsj@gmail.com",contact:"7846785"},{address:"41 ludhiana",email:"dnfjkdhsj@gmail.com",contact:"7846785"},{address:"41 ludhiana",email:"dnfjkdhsj@gmail.com",contact:"7846785"},{address:"41 ludhiana",email:"dnfjkdhsj@gmail.com",contact:"7846785"},{address:"41 ludhiana",email:"dnfjkdhsj@gmail.com",contact:"7846785"},{address:"41 ludhiana",email:"dnfjkdhsj@gmail.com",contact:"7846785"},{address:"41 ludhiana",email:"dnfjkdhsj@gmail.com",contact:"7846785"},]
+const add=[
+	    {address:"Plot No. 120, Transport Nagar, Ludhiana",email:"-",contact:"-"},
+        {address:"Plot No. 21, Transport Nagar, Jahajgarh, Amritsar",         email:"-",contact:"-"},
+		{address:"Near Ramada Hotel, Ambala Chandigarh Highway, Zirakpur.",   email:"-",contact:"-"},
+		{address:"Gagan Chowk Bye-Pass, NH-1, Rajpura",                       email:"-",contact:"-"},
+		{address:"Plot No. 10, Transport Area, Sector -26, Chandigarh",       email:"-",contact:"-"},
+		{address:"4144-45, Naya Bazar, Delhi",                                email:"-",contact:"-"},
+		{address:"AG-16, Sanjay Gandhi Transport Nagar, Delh",                email:"-",contact:"-"},
+		{address:"Shop No. 6, CSC Market, Punjabi Bagh Transport Area, Delhi",email:"-",contact:"-"},
+		{address:"Kundli Border, Near Canara Bank, Kundli",                   email:"-",contact:"-"},
+		{address:"Pillar No. 692, Opposite Metro, Old Faridabad",             email:"-",contact:"-"},
+	]
 let give=[]
 
 	
@@ -601,9 +610,11 @@ let give=[]
   function filt(){
 	addr.innerHTML=''
 	give=[]
+	console.log("bye");
 
  give=add.map((i)=>{
 	if(i.address.includes((inputField.value).toLowerCase()) || i.address.includes((inputField.value)) ){
+		console.log("hi");
 		return(i)
 	}
 	else{
@@ -618,7 +629,7 @@ let give=[]
 	const newElement = document.createElement('tr');
 	newElement.style.height="40px"
 	newElement.innerHTML +=`
-		                        <td>${i.address}</td>
+		                        <td width="550px">${i.address}</td>
 								<td>${i.email}</td>
 								<td>${i.contact}</td>
 						  `

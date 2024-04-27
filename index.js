@@ -25,32 +25,32 @@ app.post('/send-email', (req, res) => {
   console.log(name);
 
   // Create a Nodemailer transporter
-//   const transporter = nodemailer.createTransport({
-//     service: 'Gmail',
-//     auth: {
-//       user: 'shivam.development1@gmail.com', // Your Gmail email address
-//       pass: 'your-gmail-password' // Your Gmail password
-//     }
-//   });
+  const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+      user: 'shivam.development123@gmail.com', 
+      pass: 'gzxy dfnd ebtn oheg' 
+    }
+  });
 
-//   // Email message options
-//   const mailOptions = {
-//     from: 'your-email@gmail.com',
-//     to: 'recipient@example.com', // Recipient email address
-//     subject: `New message from ${name}`,
-//     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
-//   };
+  // Email message options
+  const mailOptions = {
+    from: 'shivam.development123@gmail.com',
+    to: 'shivam.ss1887@gmail.com', //anmolairnetdev@gmail.com
+    subject: `New message from ${name}`,
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+  };
 
-//   // Send email
-//   transporter.sendMail(mailOptions, (error, info) => {
-//     if (error) {
-//       console.log(error);
-//       res.status(500).send('Error sending email');
-//     } else {
-//       console.log('Email sent: ' + info.response);
-//       res.send('Email sent successfully');
-//     }
-//   });
+  
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+      res.status(500).send('Error sending email');
+    } else {
+      console.log('Email sent: ' + info.response);
+      res.send('Email sent successfully');
+    }
+  });
 });
 
 // Start the server
