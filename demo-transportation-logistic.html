@@ -50,6 +50,21 @@
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
 	</head>
+	<style>
+		@media only screen and (max-width: 600px) {
+			.trt{
+				display: flex !important;
+				flex-direction: column !important;
+				gap:50px !important
+			}
+			.rtt{
+				width: 100% !important;
+			}
+			.fs{
+				font-size: 18px !important;
+			}
+		}
+	</style>
 	<body data-plugin-page-transition>
 
 		<div class="p-relative bottom-1">
@@ -401,15 +416,21 @@
 				</section>
 
 				<section class="section border-0 bg-light mt-3 p-0 mb-2">
-					<div class="container py-5 mt-2 d-flex justify-content-between">
-						<span><span id="counter" style="font-weight: bold; font-size: 35px;  color: #16b5f5;" >0 </span><span style="font-weight: bold; font-size: 35px;color: #16b5f5 ">+</span><span style="font-weight: bold; font-size: 27px; color: black;">Agencies</span></span>
-						<span style="font-size: 40px;">|</span>
-						<span><span id="counter2" style="font-weight: bold; font-size: 35px; color: #16b5f5; margin-left: 20px;">0</span><span style="font-weight: bold; font-size: 35px;color: #16b5f5; ">+ </span><span style="font-weight: bold; font-size: 27px; color: black;">Cities</span>           </span> 
-						<span style="font-size: 40px;">|</span>
-						<span><span id="counter3" style="font-weight: bold; font-size: 35px; color: #16b5f5; margin-left: 20px;">0</span><span style="font-weight: bold; font-size: 35px;color: #16b5f5; ">+ </span><span style="font-weight: bold; font-size: 27px; color: black;">Years</span>            </span>
-						<span style="font-size: 40px;">|</span>
-						<span><span id="counter4" style="font-weight: bold; font-size: 35px; color: #16b5f5; margin-left: 20px;">0</span><span style="font-weight: bold; font-size: 35px;color: #16b5f5; ">+ </span><span style="font-weight: bold; font-size: 27px; color: black;">Logistics Fleet</span>  </span>
-					</div>
+					<span class="container py-5 mt-2  trt" style="width: 100%; display: flex; flex-direction: row; ">
+					<span  class="d-flex justify-content-between rtt" style="width: 50%;">
+						<span class="text-center border-end" style="width: 50%; "><span id="counter" class="fs" style="font-weight: bold; font-size: 35px;  color: #16b5f5;" >0 </span><span class="fs" style="font-weight: bold; font-size: 35px;color: #16b5f5 ">+</span><span class="fs" style="font-weight: bold; font-size: 27px; color: black;">Agencies</span></span>
+						
+						<span class="text-center border-end" style="width: 50%;"><span id="counter2" class="fs" style="font-weight: bold; font-size: 35px; color: #16b5f5; margin-left: 20px;">0</span><span class="fs" style="font-weight: bold; font-size: 35px;color: #16b5f5; ">+ </span><span class="fs" style="font-weight: bold; font-size: 27px; color: black;">Cities</span>           </span>
+					</span> 
+					<span class="d-flex justify-content-between rtt" style="width: 50%;">
+						<span class="text-center border-end" style="width: 45%;"><span id="counter3" class="fs" style="font-weight: bold; font-size: 35px; color: #16b5f5; margin-left: 20px;">0</span><span class="fs" style="font-weight: bold; font-size: 35px;color: #16b5f5; ">+ </span><span class="fs" style="font-weight: bold; font-size: 27px; color: black;">Years</span>            </span>
+						
+						<span class="text-center" style="width: 55%;"><span id="counter4" class="fs" style="font-weight: bold; font-size: 35px; color: #16b5f5; margin-left: 20px;">0</span><span class="fs" style="font-weight: bold; font-size: 35px;color: #16b5f5; ">+ </span><span class="fs" style="font-weight: bold; font-size: 27px; color: black;">Logistics Fleet</span>  </span>
+					</span>
+					</span>
+					
+						
+					
 				</section>
 
 				<section class="border-0 text-center custom-el-pos-2 mt-3">
