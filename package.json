@@ -6,7 +6,6 @@
   "scripts": {
     "test": "index.js",
     "start": "index.js"
-   
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +13,7 @@
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "nodemailer": "^6.9.13",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "vercel": "^34.1.3"
   }
 }
