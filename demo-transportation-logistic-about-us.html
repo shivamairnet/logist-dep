@@ -92,8 +92,26 @@
 			.ftl{
 				display: none !important;
 			}
+			
 		}
+	
+		/* 	p-3 {
+    border-radius: 10px;
+    border: 3px solid #16b5f5;
+    transition: background-color 0.3s, color 0.3s; /* Add transition for smoother effect */
+/* } */
 
+.p-3:hover {
+    background-color: #099FDC;
+
+}
+/* Change text color inside .p-3 on hover */
+.p-3:hover p {
+    color: white !important;
+}
+    /* color: white !important; */
+
+		
 	</style>
 	<body data-plugin-page-transition>
 
@@ -225,20 +243,26 @@
 				<div class="container">
 					<div class="row py-5 my-3">
 						<div class="col-lg-6">
-							<p class="font-weight-medium text-8 line-height-4 text-color-tertiary negative-ls-1 p-relative bottom-10">Welcome to <strong>The Bharat Motor Transport Co  </strong> </p>
+							<p class="font-weight-medium text-8 line-height-4 text-color-tertiary negative-ls-1 p-relative bottom-10">Welcome to <strong style="color: #099FDC;">The Bharat Motor Transport Company  </strong> </p>
 
 							<p class="line-height-8 font-weight-medium text-4">Established in <span class="highlight highlight-primary highlight-bg-opacity highlight-animated text-color-tertiary" data-appear-animation="highlight-animated-start" data-appear-animation-delay="400" data-plugin-options="{'flagClassOnly': true}"> 1933,</span>in the vibrant landscape of India, The Bharat Motor Transport Co  has been a stalwart in the transportation and logistics industry for over 88 years. With our roots deeply embedded in Ludhiana, Punjab, India, we have proudly served our clients with unwavering dedication, reliability, and innovation.</p>
 
-							<p class="custom-drop-caps font-weight-medium text-4 my-4"><span class="custom-drop-caps-number text-color-dark negative-ls-1"><span class="d-inline-block appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="0">90</span></span> years in business. Decades of expertise, innovation, growth, resilience, adaptability, trust, industry leadership.</p>
-
-							<p class="line-height-7 font-weight-regular text-3"> Decades of expertise, innovation, growth, resilience, adaptability, trust, industry leadership.</p>
+							<!-- <p class="custom-drop-caps font-weight-medium text-4 my-4"><span class="custom-drop-caps-number text-color-dark negative-ls-1"><span class="d-inline-block appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="0">90</span></span> years in business. Decades of expertise, innovation, growth, resilience, adaptability, trust, industry leadership.</p> -->
+							<p class="custom-drop-caps font-weight-medium text-4 my-4"style="margin-top: 20px;">
+								<span class="custom-drop-caps-number text-color-dark negative-ls-1">
+									<span class="d-inline-block appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="0" style="color: #099FDC;">90</span>
+								</span>  
+								<span style="font-size: smaller;top: 40px;">years in business.Decades of expertise, innovation, growth, resilience, adaptability, trust, industry leadership.</span>
+							</p>
+							
+							<!-- <p class="line-height-7 font-weight-regular text-3"> Decades of expertise, innovation, growth, resilience, adaptability, trust, industry leadership.</p> -->
 
 							<div class="d-flex flex-row pt-3">
 								<div class="pt-2">
-									<img class="avatar rounded-circle" alt="" width="50" src="img/avatars/avatar-4.jpg">
+									<img class="avatar rounded-circle" alt="" width="40" src="img/avatars/avatar-4.jpg">
 								</div>
 								<div class="ps-3">
-									<h4 class="mt-2 mb-0 text-5 font-weight-semi-bold">Mr. Sandeep Kler</h2>
+									<h4 class="mt-2 mb-0 text-5 font-weight-semi-bold ">Mr. Sandeep Kler</h2>
 									<p class="mb-2 font-weight-medium text-3">CEO & FOUNDER</p>
 								</div>
 							</div>
@@ -260,7 +284,7 @@
 				</div>
 
 				
-				<section class="section border-0 bg-light  p-0" style="margin-top: 100px;">
+				<section class="section border-0 bg-light  p-0" style="margin-top: 30px;">
 					
 					<div class="container py-5 mt-4 d-flex flex-column justify-content-center align-items-center">
 						<p class="text-center" style="font-size: 30px; font-weight: bold; color: black;">Our Core Principles</p>
@@ -268,7 +292,7 @@
 							<div class="p-3" style="border-radius: 10px; border: 3px solid #16b5f5;"><p class="text-center text-black fw-bold" style="font-size: 20px">Our Legacy</p>     <p class="text-center">For nearly nine decades, The Bharat Motor Transport co. has been at the forefront of India's transportation and logistics landscape, witnessing and actively participating in the country's economic evolution. Our journey is marked by milestones of growth, resilience, and a relentless pursuit of excellence. From humble beginnings, we have grown into a trusted name synonymous with efficiency.</p></div>
 							<div class="p-3" style="border-radius: 10px; border: 3px solid #16b5f5;"><p class="text-center text-black fw-bold" style="font-size: 20px">Our Commitment</p> <p class="text-center">As pioneers in the transportation and logistics industry, we are committed to upholding the highest standards of professionalism, safety, and environmental responsibility. Our team of seasoned professionals is dedicated to providing personalized service, innovative solutions, and unparalleled reliability, ensuring that your cargo reaches its destination safely and efficiently, every time.</p></div>
 							<div class="p-3" style="border-radius: 10px; border: 3px solid #16b5f5;"><p class="text-center text-black fw-bold" style="font-size: 20px">Our Services</p>   <p class="text-center">At The Bharat Motor Transport co., we are proud to offer a comprehensive suite of transportation and logistics solutions tailored to meet the diverse needs of our clients. Whether it's road transport, warehousing, freight forwarding, or custom logistics services, we leverage our expertise and industry experience to deliver seamless solutions that drive business success.</p></div>
-							<div class="p-3" style="border-radius: 10px; border: 3px solid #16b5f5;"><p class="text-center text-black fw-bold" style="font-size: 20px">Our Vision</p>     <p class="text-center">Driven by a vision to be the preferred logistics partner for businesses across India and beyond, we continuously strive to innovate, adapt, and exceed expectations. We envision a future where The Bharat Motor Transport co. is synonymous with excellence, integrity, and sustainable growth, setting the benchmark for the industry's best practices.</p></div>
+							<div class="p-3" style="border-radius: 10px; border: 3px solid #16b5f5;"><p class="text-center text-black fw-bold" style="font-size: 20px;">Our Vision</p>     <p class="text-center">Driven by a vision to be the preferred logistics partner for businesses across India and beyond, we continuously strive to innovate, adapt, and exceed expectations. We envision a future where The Bharat Motor Transport co. is synonymous with excellence, integrity, and sustainable growth, setting the benchmark for the industry's best practices.</p></div>
 							
 						</div>
 					</div>

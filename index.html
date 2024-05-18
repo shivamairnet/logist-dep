@@ -60,8 +60,14 @@
 		}
 
 		li:hover{
-			text-decoration: underline 4px rgb(126, 191, 230);
-			cursor: pointer;
+			/* text-decoration: underline 4px rgb(126, 191, 230);
+			cursor: pointer; */
+			/* Hover effect for list items */
+			
+        color:#0a97cf !important; /* Change this to your desired color */
+        cursor: pointer;
+        /* text-shadow: 0 0 8px rgba(0, 159, 220, 0.8); Adjust the color and spread as needed for the glow effect */
+    
 		}
 		
 		.carousel-half-full-width-wrapper .owl-carousel .owl-item {
@@ -105,12 +111,27 @@
 				display: none !important;
 			}
 		}
+
+
+		.cat-item {
+        position: relative;
+        display: inline-block;
+    }
+
+    .cat-item img {
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .cat-item:hover img {
+        box-shadow: 0 0 15px rgba(0, 159, 220, 0.7); /* Adjust the color and spread as needed */
+        transform: scale(1.05); /* Optional: Slightly enlarge the image */
+    }
 		
 	</style>
 	<body data-plugin-page-transition>
 
 		<div class="p-relative bottom-1">
-			<header id="header" class="header-effect-reveal" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'reveal', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': false, 'stickyStartAt': 200, 'stickySetTop': '-44px'}">
+			<header id="header" class="header-effect-reveal" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'reveal', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': false, 'stickyStartAt': 200, 'stickySetTop': '-44px'}" >
 				<div class="header-body border-0 border-bottom-light">
 					<div class="header-container container-fluid p-0">
 						<div class="header-row">
@@ -118,7 +139,7 @@
 								<div class="header-row">
 									<div class="header-logo p-relative top-1 m-0">
 										<a href="index.html">
-											<img class="log" alt="Porto" width="200" height="150" src="img/about/logothe.jpeg">
+											<img class="log" alt="Porto" width="150" height="120" src="img/about/logothe3.jpg">
 										</a>
 									</div>
 								</div>
@@ -228,12 +249,12 @@
 								<div class="container-fluid h-100 px-lg-5 mx-lg-5 pb-5">
 									<div class="row h-100 p-relative z-index-1 gx-5 pb-5">
 										<div class="col">
-											<div class="p-absolute top-50pct appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100" data-plugin-options="{'minWindowWidth': 0}">
-												<h3 class="text-color-light rotate-r-90 font-weight-bold ls-0 p-relative left-0 custom-font-size-1 pe-5 ws-nowrap"></h3>
+											<div class="p-absolute top-50pct appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100" data-plugin-options="{'minWindowWidth': 0}" style="top: 40%;">
+												<h4 class="text-color-light rotate-r-90 font-weight-bold ls-0 p-absolue top-50pct left-0 custom-font-size-1 pe-2 ws-nowrap"style="padding-right: 2px;">Refined Logistics,</br></br></br>Seamless Operation</h4>
 											</div>
-											<div class="p-absolute top-50pct appear-animation" data-appear-animation="fadeInRightShorterPlus" data-appear-animation-delay="300" data-plugin-options="{'minWindowWidth': 0}">
-												<h3 class="custom-stroke-text-effect-1 color-transparent rotate-r-90 font-weight-bold ls-0 p-relative custom-text-pos-1 custom-font-size-1 pe-5 ws-nowrap">We Delivery</h3>
-											</div>
+											<!-- <div class="p-absolute top-50pct appear-animation" data-appear-animation="fadeInRightShorterPlus" data-appear-animation-delay="300" data-plugin-options="{'minWindowWidth': 0}">
+												<h3 class="custom-stroke-text-effect-1 color-transparent rotate-r-90 font-weight-bold ls-0 p-relative custom-text-pos-1 custom-font-size-1 pe-5 ws-nowrap"></h3>
+											</div> -->
 										</div>
 									</div>
 								</div>
@@ -245,8 +266,8 @@
 								<div class="container-fluid h-100 px-lg-5 mx-lg-5 pb-5 text-end">
 									<div class="row h-100 p-relative z-index-1 gx-5 pb-5">
 										<div class="col">
-											<h3 class="text-color-light rotate-r-90 font-weight-bold ls-0 p-absolute top-50pct right-0 custom-font-size-1 pe-5 ws-nowrap">We Delivery</h3>
-											<h3 class="custom-stroke-text-effect-1 color-transparent rotate-r-90 font-weight-bold ls-0 p-absolute top-50pct custom-text-pos-2 custom-font-size-1 pe-5 ws-nowrap">We Delivery</h3>
+											<h4 class="text-color-light rotate-r-90 font-weight-bold ls-0 p-absolute top-50pct right-0 custom-font-size-1 pe-5 ws-nowrap" style="top: 40%;">Elegant Logistics,</br></br></br>Effortless Efficiency</h4>
+											<!-- <h3 class="custom-stroke-text-effect-1 color-transparent rotate-r-90 font-weight-bold ls-0 p-absolute top-50pct custom-text-pos-2 custom-font-size-1 pe-5 ws-nowrap">We Delivery</h3> -->
 										</div>
 									</div>
 								</div>
@@ -280,7 +301,9 @@
 													<div class="ps-4">
 														<h4 class="mb-2 text-5 font-weight-semi-bold">Express Cargo</h4>
 														<p class="mb-2 font-weight-medium text-3">Efficient, economical, reliable, trucks, packages, cost-effective, environmentally friendly.</p>
-														<a href="#" class="text-uppercase text-2-5 stretched-link text-decoration-underline text-color-primary text-color-hover-tertiary font-weight-semi-bold transition-2ms d-inline-block">View More</a>
+														<a href="#" class="text-uppercase text-2-5 stretched-link text-decoration-underline text-color-primary text-color-hover-tertiary font-weight-semi-bold transition-2ms d-inline-block">
+															<!-- View More -->
+														</a>
 													</div>
 												</div>
 											</div>
@@ -296,7 +319,9 @@
 													<div class="ps-4">
 														<h4 class="mb-2 text-5 font-weight-semi-bold">Parcel Service</h4>
 														<p class="mb-2 font-weight-medium text-3">Convenient, seamless, end-to-end, personalized, delivery, tracking, updates, doorstep</p>
-														<a href="#" class="text-uppercase text-2-5 stretched-link text-decoration-underline text-color-primary text-color-hover-tertiary font-weight-semi-bold transition-2ms d-inline-block">View More</a>
+														<a href="#" class="text-uppercase text-2-5 stretched-link text-decoration-underline text-color-primary text-color-hover-tertiary font-weight-semi-bold transition-2ms d-inline-block">
+															<!-- View More -->
+														</a>
 													</div>
 												</div>
 											</div>
@@ -312,7 +337,9 @@
 													<div class="ps-4">
 														<h4 class="mb-2 text-5 font-weight-semi-bold">LTL(Less Than Truck Load)</h4>
 														<p class="mb-2 font-weight-medium text-3">Storage, inventory, organization, distribution, logistics, efficiency, security</p>
-														<a href="#" class="text-uppercase text-2-5 stretched-link text-decoration-underline text-color-primary text-color-hover-tertiary font-weight-semi-bold transition-2ms d-inline-block">View More</a>
+														<a href="#" class="text-uppercase text-2-5 stretched-link text-decoration-underline text-color-primary text-color-hover-tertiary font-weight-semi-bold transition-2ms d-inline-block">
+															<!-- View More -->
+														</a>
 													</div>
 												</div>
 											</div>
@@ -328,7 +355,10 @@
 													<div class="ps-4">
 														<h4 class="mb-2 text-5 font-weight-semi-bold"> FTL (Full Truck Load)</h4>
 														<p class="mb-2 font-weight-medium text-3">Storage, inventory, organization, distribution, logistics, efficiency, security, Accountabilty</p>
-														<a href="#" class="text-uppercase text-2-5 stretched-link text-decoration-underline text-color-primary text-color-hover-tertiary font-weight-semi-bold transition-2ms d-inline-block">View More</a>
+														<a href="#" class="text-uppercase text-2-5 stretched-link text-decoration-underline text-color-primary text-color-hover-tertiary font-weight-semi-bold transition-2ms d-inline-block">
+															<!-- View More -->
+															
+														</a>
 													</div>
 												</div>
 											</div>
@@ -347,26 +377,26 @@
 					
 					<div class="container py-5 mt-4 d-flex flex-column justify-content-center align-items-center">
 						<div>
-							<span class="fw-bold" style="font-size: 25px;">Our Valuable Clients</span>
+							<span class="fw-bold" style="font-size: 40px;">Our Valuable Clients</span>
 						</div>
 						<div class="row align-items-center text-center mt-2 w-100">
 							<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
-								<img src="img/frntt/Client Logo 1.png" alt="" class="img-fluid" style="max-width: 90px;">
+								<img src="img/frntt/Client Logo 1.png" alt="" class="img-fluid" style="max-width: 120px;">
 							</div>
 							<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
-								<img src="img/frntt/Client Logo 2.png" alt="" class="img-fluid" style="max-width: 140px;">
+								<img src="img/frntt/Client Logo 2.png" alt="" class="img-fluid" style="max-width: 170px;">
 							</div>
 							<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
-								<img src="img/frntt/Client Logo 3.png" alt="" class="img-fluid" style="max-width: 140px;">
+								<img src="img/frntt/Client Logo 3.png" alt="" class="img-fluid" style="max-width: 170px;">
 							</div>
 							<div class="col-sm-4 col-lg-2 mb-5 mb-sm-0">
-								<img src="img/frntt/Client Logo 4.png" alt="" class="img-fluid" style="max-width: 140px;">
+								<img src="img/frntt/Client Logo 4.png" alt="" class="img-fluid" style="max-width: 170px;">
 							</div>
 							<div class="col-sm-4 col-lg-2 mb-5 mb-sm-0">
-								<img src="img/frntt/Client Logo 5.png" alt="" class="img-fluid" style="max-width: 100px;">
+								<img src="img/frntt/Client Logo 5.png" alt="" class="img-fluid" style="max-width: 170px;">
 							</div>
 							<div class="col-sm-4 col-lg-2">
-								<img src="img/frntt/Client Logo 6.png" alt="" class="img-fluid" style="max-width: 100px;">
+								<img src="img/frntt/Client Logo 6.png" alt="" class="img-fluid" style="max-width: 110px;">
 							</div>
 						</div>
 					</div>
@@ -380,8 +410,8 @@
 						<div class="row pb-3">
 							<div class="col pb-5 mb-3 d-flex flex-column justify-content-center align-items-center gap-5 " style="overflow: hidden; height: 437px; background-image: url('img/about/Truck Image.png' ); background-repeat: no-repeat; background-size: cover;  ">
 
-								<div data-aos="fade-right" class="px-5  text-center" style="margin-top: 100px;"><span class="txt" style="color: white;  font-weight:normal; text-align: center; font-family:Arial, Helvetica, sans-serif;; line-height: 50px;  ">Fed Up With Unpredictable Freight Costs? Discover Transparent Pricing And Cost-Saving Options Today!</span></div>
-								<a href="demo-transportation-logistic-contact-us.html"><div class=""><button class="cta btn  text-white rounded" style="background-color: #16b5f5; height: 50px; width: 280px; font-size: 20px; "> Talk With Our Experts </button></div></a>
+								<div data-aos="fade-right" class="px-5  text-center" style="margin-top: 110px; margin-bottom: auto;"><span class="txt" style="color: white;  font-weight:normal; text-align: center; font-family:Arial, Helvetica, sans-serif; line-height: 50px; font-size: xx-large; ">Fed Up With Unpredictable Freight Costs?</br> Discover Transparent Pricing And Cost-Saving Options Today With<br><B>The Bharat Transport</B></span></div>
+								<a href="demo-transportation-logistic-contact-us.html" style="margin-top: auto; margin-bottom: 50px;"><div class=""><button class="cta btn  text-white rounded" style="background-color: #16b5f5; height: 50px; width: 280px; font-size: 20px; "> Talk With Our Experts </button></div></a>
 								
 							</div>
 						</div>
@@ -392,90 +422,6 @@
 				
 
 
-				<section class="border-0 section-intro">
-					<div class="container py-5">
-						<div class="row mt-4">
-							<div class="col-lg-5">
-								<p class="custom-drop-caps font-weight-medium text-4"><span class="custom-drop-caps-number text-color-dark negative-ls-1"><span class="d-inline-block appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="0">90</span></span> years in business. Decades of expertise, innovation, growth, resilience, adaptability, trust, industry leadership.</p>
-								<p class="m-0"><a href="demo-transportation-logistic-about-us.html" class="text-uppercase text-3-5 text-decoration-underline text-color-primary text-color-hover-tertiary font-weight-semi-bold transition-3ms d-inline-block">View More About Us</a></p>
-							</div>
-							<div class="d-none d-lg-block col-lg-1 text-center">
-								<div class="vr bg-primary opacity-10 custom-vr-1"></div>
-							</div>
-							<div class="pb-5 pb-lg-0 my-5 my-lg-0 col-lg-6">
-								<p class="font-weight-medium text-8 line-height-4 text-color-tertiary negative-ls-1 p-relative bottom-10"><span class="d-lg-inline-block appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="0">We are <strong>committed</strong> to providing our</span> <span class="d-lg-inline-block appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="200">clients the best logistic and</span><span class="d-lg-inline-block appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="400"> transportation services.</span></p>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section class="border-0 custom-bg-color-grey-1">
-					<div class="container py-5">
-						<div class="row pb-3">
-							<div class="col pb-5 mb-3">
-
-								<div class="owl-carousel owl-theme nav-dark nav-style-1 nav-arrows-thin nav-font-size-lg nav-outside mb-0 custom-el-pos-1" style="height: 359px;" data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 2}, '979': {'items': 2}, '1199': {'items': 3}}, 'loop': false, 'nav': true, 'dots': false, 'margin': 20}">
-									<div>
-										<span class="thumb-info thumb-info-swap-content anim-hover-inner-wrapper">
-											<span class="thumb-info-wrapper overlay overlay-show overlay-gradient-bottom-content">
-												<img src="img/about/del.jpg" class="img-fluid" alt="">
-												<span class="thumb-info-title bottom-30 bg-transparent w-100 mw-100 p-0 text-center">
-													<span class="thumb-info-swap-content-wrapper">
-														<span class="thumb-info-inner text-3-5 pb-2">
-															Registered Shippers
-														</span>
-														<span class="thumb-info-inner text-2">
-															<p class="px-5 text-2 opacity-7 font-weight-medium text-light ls-0">Our broad network and experience assures secure and fast delivery of products throughout India.</p>
-															
-														</span>
-													</span>
-												</span>
-											</span>
-										</span>
-									</div>
-									<div>
-										<span class="thumb-info thumb-info-swap-content anim-hover-inner-wrapper">
-											<span class="thumb-info-wrapper overlay overlay-show overlay-gradient-bottom-content">
-												<img src="img/about/center.png" class="img-fluid" alt="">
-												<span class="thumb-info-title bottom-30 bg-transparent w-100 mw-100 p-0 text-center">
-													<span class="thumb-info-swap-content-wrapper">
-														<span class="thumb-info-inner text-3-5 pb-2">
-															Local Pickup and Delivery
-														</span>
-														<span class="thumb-info-inner text-2">
-															<p class="px-5 text-2 opacity-7 font-weight-medium text-light ls-0">Whether you're delivering parcels, documents, or larger objects, our dependable staff ensures timely and secure transit from door to door.</p>
-															
-														</span>
-													</span>
-												</span>
-											</span>
-										</span>
-									</div>
-									<div>
-										<span class="thumb-info thumb-info-swap-content anim-hover-inner-wrapper">
-											<span class="thumb-info-wrapper overlay overlay-show overlay-gradient-bottom-content">
-												<img src="img/about/fright.jpg" class="img-fluid" alt="">
-												<span class="thumb-info-title bottom-30 bg-transparent w-100 mw-100 p-0 text-center">
-													<span class="thumb-info-swap-content-wrapper">
-														<span class="thumb-info-inner text-3-5 pb-2">
-															Freight Consolidation
-														</span>
-														<span class="thumb-info-inner text-2">
-															<p class="px-5 text-2 opacity-7 font-weight-medium text-light ls-0">By combining many smaller shipments into bigger, with more cost-effective loads, we optimize shipping routes and save costs for our clients.</p>
-															
-														</span>
-													</span>
-												</span>
-											</span>
-										</span>
-									</div>
-									
-								</div>
-
-							</div>
-						</div>
-					</div>
-				</section>
 
 				
 
@@ -497,101 +443,7 @@
 					
 				</section>
 
-				<section class="section border-0 bg-light mt-4 p-0 mb-2">
-					<span class="container py-5 mt-2  trt d-flex flex-column justify-content-center align-items-center" style="width: 100% ">
-					<span class="fw-bold mb-3" style="color: black; font-size: 28px;">Industries We Cater At The Bharat Transport</span>
-					<p  class="cater-content text-center " style="padding-left: 152px; padding-right: 152px;">With a rich 90-year legacy, we've transformed from a goods and transport venture into India's leading logistics and supply chain powerhouse, where we combine tradition with cutting-edge solutions to deliver exceptional service.</p>
-					<div class="cater mt-5" style="display: grid; grid-template-columns: auto auto auto auto auto; grid-gap: 50px  70px;" >
-						<div class="text-center fw-bold text-black "><img class=" cat-img shadow mb-2 p-2" src="img/about/discount.png" alt="" style="height: 100px; width: 100px; border:3px solid black; border-radius: 10px;"> <div>Specialty Items</div></div>
-						<div class="text-center fw-bold text-black "><img class=" cat-img shadow mb-2 px-2 pt-4" src="img/about/car (1).png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Automobile</div></div>
-						<div class="text-center fw-bold text-black "><img class=" cat-img shadow mb-2 p-2" src="img/about/chemicals.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Chemicals</div></div>
-						<div class="text-center fw-bold text-black "><img class=" cat-img shadow mb-2 p-2" src="img/about/factory.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Textile Goods</div></div>
-						<div class="text-center fw-bold text-black "><img class=" cat-img shadow mb-2 p-2" src="img/about/oil.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Lubricants</div></div>
-						<div class="text-center fw-bold text-black "><img class=" cat-img shadow mb-2 p-2" src="img/about/gas-cylinder.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Medical Equipments</div></div>
-						<div class="text-center fw-bold text-black "><img class=" cat-img shadow mb-2 p-2" src="img/about/consumer.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Consumer Goods</div></div>
-						<div class="text-center fw-bold text-black "><img class=" cat-img shadow mb-2 p-2" src="img/about/paper.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Paper Products</div></div>
-						<div class="text-center fw-bold text-black "><img class=" cat-img shadow mb-2 p-2" src="img/about/shipping.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>FMCG</div></div>
-						<div class="text-center fw-bold text-black "><img class=" cat-img shadow mb-2 p-2" src="img/about/wheel.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Tyre</div></div>
-					</div>
-					</span>
-					
-						
-					
-				</section>
-
-				<section class="border-0 text-center custom-el-pos-2 mt-3">
-					<div class="container py-5">
-						<div class="row">
-							<div class="col">
-								<h2 class="custom-heading-1"><span class="d-inline-block appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="0">CEO Insights</span></h2>
-							</div>
-						</div>
-						<div class="row pt-4">
-							<div class="col">
-								<div class="pb-3">
-									<img width="68" src="img/demos/transportation-logistic/icons/quote.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-tertiary'}" />
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col">
-
-								<div class="owl-carousel owl-theme nav-dark nav-style-1 nav-arrows-thin nav-font-size-lg nav-outside mb-0" data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 1}, '979': {'items': 1}, '1199': {'items': 1}}, 'loop': false, 'nav': true, 'dots': false, 'margin': 20}">
-									<div>
-										<div class="testimonial testimonial-style-5 px-lg-5 mx-lg-5">
-											<blockquote>
-												<p class="mb-0 line-height-8 font-weight-medium text-4">Wherever your goods need to go in world,<br> our transportation logistics team ensures they get there on time.</p>
-											</blockquote>
-											<div class="testimonial-author border-0">
-												<p><strong class="font-weight-extra-bold pt-2">Mr. Sandeep Kler</strong><span>CEO &amp; Founder </span></p>
-											</div>
-										</div>
-									</div>
-									<div>
-										<div class="testimonial testimonial-style-5 px-lg-5 mx-lg-5">
-											<blockquote>
-												<p class="mb-0 line-height-8 font-weight-medium text-4">Bridging distances, connecting businesses. Our transportation ensures seamless movement,<br> making the world smaller and opportunities boundless.</p>
-											</blockquote>
-											<div class="testimonial-author border-0">
-												<p><strong class="font-weight-extra-bold pt-2">Mr. Sandeep Kler</strong><span>CEO &amp; Founder </span></p>
-											</div>
-										</div>
-									</div>
-									<div>
-										<div class="testimonial testimonial-style-5 px-lg-5 mx-lg-5">
-											<blockquote>
-												<p class="mb-0 line-height-8 font-weight-medium text-4">Efficiently navigating the world's highways, skies, and seas to deliver your cargo safely and swiftly.<br> Your journey, our commitment.</p>
-											</blockquote>
-											<div class="testimonial-author border-0">
-												<p><strong class="font-weight-extra-bold pt-2">Mr. Sandeep Kler</strong><span>CEO &amp; Founder </span></p>
-											</div>
-										</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<div class="bg-gradient m-0">
-					<div class="container py-2">
-						<div class="row align-items-center text-center text-lg-start py-5">
-							<div class="col-lg-9 mb-3 mb-lg-0">
-								<p class="text-color-light text-4-5 font-weight-medium line-height-4 mb-0">
-									<span class="d-inline-block appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="0">
-										<strong>Request Rate Online</strong> - Need Immediate Confirmation? Call Us at <u>9815002222</u>
-									</span>
-								</p>
-							</div>
-							<div class="col-lg-3 pt-3 pt-lg-0 text-center text-lg-end">
-								<span class="d-inline-block appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="300">
-									<a  href="demo-transportation-logistic-contact-us.html#frm" class="btn btn-light text-color-tertiary border-0 text-3-5 font-weight-semi-bold btn-px-5 btn-py-3">Request Rate</a>
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
+				<!-- process section shifted here -->
 
 				<div class="container-fluid">
 					<div class="row">
@@ -601,7 +453,7 @@
 									<div class="col-half-section col-half-section-right py-5 ms-auto">
 										<div class="px-3 py-5">
 
-											<p class="font-weight-medium text-8 line-height-4 text-color-tertiary negative-ls-1"><span class="d-lg-inline-block appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="0">Our <strong>process</strong> is one of the things</span><span class="d-lg-inline-block appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="200"> that makes us very competitive</span><span class="d-lg-inline-block appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="400"> in the logistic market.</span></p>
+											<p class="font-weight-medium text-9 line-height-4 text-color-tertiary negative-ls-1"; style="margin-top: -20px;"><span class="d-lg-inline-block appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="0">Our <strong style="color:#099FDC;">process</strong> is one of the things</span><span class="d-lg-inline-block appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="200"> that makes us very competitive</span><span class="d-lg-inline-block appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="400"> in the logistic market.</span></p>
 
 											<div class="process process-vertical py-4">
 												<div class="process-step appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
@@ -645,11 +497,131 @@
 					</div>
 				</div>
 
+
+				<section class="section border-0 bg-light mt-4 p-0 mb-2">
+					<span class="container py-5 mt-2  trt d-flex flex-column justify-content-center align-items-center" style="width: 100% ">
+					<div style="margin-top: -15px;">
+						<span class="fw-bold mb-3" style="color: black; font-size: 35px;">Industries We Cater At </span>
+					<span class="fw-bold mb-3" style="color:#099FDC; font-size: 35px;">The Bharat Transport</span>
+					</div>
+					<p  class="cater-content text-center " style="padding-left: 152px; padding-right: 152px;">With a rich 90-year legacy, we've transformed from a goods and transport venture into India's leading logistics and supply chain powerhouse, where we combine tradition with cutting-edge solutions to deliver exceptional service.</p>
+					<div class="cater mt-5" style="display: grid; grid-template-columns: auto auto auto auto auto; grid-gap: 50px  70px;" >
+						<div class="text-center fw-bold text-black cat-item "><img class=" cat-img shadow mb-2 p-2" src="img/about/discount.png" alt="" style="height: 100px; width: 100px; border:3px solid black; border-radius: 10px;"> <div>Specialty Items</div></div>
+						<div class="text-center fw-bold text-black cat-item"><img class=" cat-img shadow mb-2 px-2 pt-4" src="img/about/car (3).png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Automobile</div></div>
+						<div class="text-center fw-bold text-black cat-item"><img class=" cat-img shadow mb-2 p-2" src="img/about/chemicals.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Chemicals</div></div>
+						<div class="text-center fw-bold text-black cat-item"><img class=" cat-img shadow mb-2 p-2" src="img/about/factory.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Textile Goods</div></div>
+						<div class="text-center fw-bold text-black cat-item"><img class=" cat-img shadow mb-2 p-2" src="img/about/oil.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Lubricants</div></div>
+						<div class="text-center fw-bold text-black cat-item"><img class=" cat-img shadow mb-2 p-2" src="img/about/gas-cylinder.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Medical Equipments</div></div>
+						<div class="text-center fw-bold text-black cat-item"><img class=" cat-img shadow mb-2 p-2" src="img/about/consumer.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Consumer Goods</div></div>
+						<div class="text-center fw-bold text-black cat-item"><img class=" cat-img shadow mb-2 p-2" src="img/about/paper.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Paper Products</div></div>
+						<div class="text-center fw-bold text-black cat-item"><img class=" cat-img shadow mb-2 p-2" src="img/about/shipping.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>FMCG</div></div>
+						<div class="text-center fw-bold text-black cat-item"><img class=" cat-img shadow mb-2 p-2" src="img/about/wheel.png" alt="" style="height: 100px; width: 100px;border:3px solid black; border-radius: 10px;"><div>Tyre</div></div>
+					</div>
+					</span>
+					
+										
+				</section>
+
+
+
+
+				<!-- add sections here -->
+
+<section class="border-0 section-intro" >
+					<div class="container py-5">
+						<div class="row mt-4">
+							<div class="col-lg-5">
+								<p class="custom-drop-caps font-weight-medium text-4"><span class="custom-drop-caps-number text-color-dark negative-ls-1" style="position: relative; top: -40px;"><span class="d-inline-block appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="0" style="color: #099FDC;">90</span></span> years in business. Decades of expertise, innovation, growth, resilience, adaptability, trust, industry leadership.</p>
+								<p class="m-0"><a href="demo-transportation-logistic-about-us.html" class="text-uppercase text-3-5 text-decoration-underline text-color-primary text-color-hover-tertiary font-weight-semi-bold transition-3ms d-inline-block">View More About Us</a></p>
+							</div>
+							<div class="d-none d-lg-block col-lg-1 text-center">
+								<div class="vr bg-primary opacity-10 custom-vr-1"></div>
+							</div>
+							<div class="pb-5 pb-lg-0 my-5 my-lg-0 col-lg-6">
+								<p class="font-weight-medium text-8 line-height-4 text-color-tertiary negative-ls-1 p-relative bottom-10"><span class="d-lg-inline-block appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="0">We are <strong style="color: #099FDC;">committed</strong> to providing our</span> <span class="d-lg-inline-block appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="200">clients the best logistic and</span><span class="d-lg-inline-block appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="400"> transportation services.</span></p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+
+<section class="border-0 custom-bg-color-grey-1">
+					<div class="container py-5">
+						<div class="row pb-3">
+							<div class="col pb-5 mb-3">
+
+								<div class="owl-carousel owl-theme nav-dark nav-style-1 nav-arrows-thin nav-font-size-lg nav-outside mb-0 custom-el-pos-1" style="height: 359px;" data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 2}, '979': {'items': 2}, '1199': {'items': 3}}, 'loop': false, 'nav': true, 'dots': false, 'margin': 20}">
+									<div>
+										<span class="thumb-info thumb-info-swap-content anim-hover-inner-wrapper">
+											<span class="thumb-info-wrapper overlay overlay-show overlay-gradient-bottom-content">
+												<img src="img/about/del.jpg" class="img-fluid" alt="">
+												<span class="thumb-info-title bottom-30 bg-transparent w-100 mw-100 p-0 text-center">
+													<span class="thumb-info-swap-content-wrapper">
+														<span class="thumb-info-inner text-3-5 pb-2">
+															Registered Shippers
+														</span>
+														<span class="thumb-info-inner text-2">
+															<p class="px-5 text-2 opacity-7 font-weight-medium text-light ls-0">Our broad network and experience assures secure and fast delivery of products throughout India.</p>
+															
+														</span>
+													</span>
+												</span>
+											</span>
+										</span>
+									</div>
+									<div>
+										<span class="thumb-info thumb-info-swap-content anim-hover-inner-wrapper">
+											<span class="thumb-info-wrapper overlay overlay-show overlay-gradient-bottom-content">
+												<img src="img/about/center.png" class="img-fluid" alt="">
+												<span class="thumb-info-title bottom-30 bg-transparent w-100 mw-100 p-0 text-center">
+													<span class="thumb-info-swap-content-wrapper">
+														<span class="thumb-info-inner text-3-5 pb-2">
+															Local Pickup and Delivery
+														</span>
+														<span class="thumb-info-inner text-2">
+															<p class="px-5 text-1 opacity-7 font-weight-medium text-light ls-0">Whether you're delivering parcels, documents, or larger objects, our dependable staff ensures timely and secure transit from door to door.</p>
+															
+														</span>
+													</span>
+												</span>
+											</span>
+										</span>
+									</div>
+									<div>
+										<span class="thumb-info thumb-info-swap-content anim-hover-inner-wrapper">
+											<span class="thumb-info-wrapper overlay overlay-show overlay-gradient-bottom-content">
+												<img src="img/about/fright.jpg" class="img-fluid" alt="">
+												<span class="thumb-info-title bottom-30 bg-transparent w-100 mw-100 p-0 text-center">
+													<span class="thumb-info-swap-content-wrapper">
+														<span class="thumb-info-inner text-3-5 pb-2">
+															Freight Consolidation
+														</span>
+														<span class="thumb-info-inner text-2">
+															<p class="px-5 text-2 opacity-7 font-weight-medium text-light ls-0">By combining many smaller shipments into bigger, with more cost-effective loads, we optimize shipping routes and save costs for our clients.</p>
+															
+														</span>
+													</span>
+												</span>
+											</span>
+										</span>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				
+<!-- setions till here -->
 				<section class="border-0 custom-bg-color-grey-1 pt-5 custom-el-pos-3 p-relative z-index-1">
 					<div class="container py-5">
 						<div class="row justify-content-between pt-5">
 							<div class="col-lg-5">
-								<h3 class="font-weight-semibold text-5  mb-2">Why To Choose The Bharat Transport For Your Cargo Transportation Needs</h3>
+								<h2 class="font-weight-bold text-6  mb-2" >Why To Choose<span style="color:#099FDC "> The Bharat Transport </span>For Your Cargo Transportation Needs</h2>
 								<div class="divider divider-small mt-0 mb-5">
 									<hr class="bg-primary">
 								</div>
@@ -739,6 +711,8 @@
 				
 
 			</div>
+
+
 			<footer id="footer" class="position-relative top-1 bg-tertiary border-top-0">
 
 				<div class="container py-5">

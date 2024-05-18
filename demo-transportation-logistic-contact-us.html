@@ -51,6 +51,12 @@
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
+		<!-- jQuery and Bootstrap JS for Carousel -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	</head>
+
 	</head>
 	<style>
 		@media only screen and (max-width: 600px) {
@@ -135,6 +141,14 @@
 .next-btn {
   right: 10px;
 }
+
+#gridContainer .grid-item:hover {
+    
+    
+	box-shadow: 0 0 10px 5px #099fdc;
+}
+
+        
 	</style>
 	<body data-plugin-page-transition>
 
@@ -292,9 +306,6 @@
 				
 
 				<section class="border-0 p-relative pb-2">
-
-					
-
 					<div class="container pt-5 mt-3 pb-3">
 						<div class="row">
 							<div class="col">
@@ -315,9 +326,20 @@
 						</div>
 					</div>
 
-				</section>
+					
 
+				</section>
 				<hr>
+
+				<section class="border-0 p-relative pb-2">
+					<div class="container pt-5 mt-3 pb-3">
+						<h2 class="text-center mb-4">Head Offices</h2>
+						<div class="row" id="gridContainer">
+							<!-- Grid items will be inserted dynamically -->
+						</div>
+					</div>
+				</section>
+				
 
 				<div class="container" id="frm">
 					<div class="row py-5 my-3">
@@ -481,6 +503,8 @@
   const message2 = document.querySelector('#message');
   const email2 = document.querySelector('#email');
   const tt = document.querySelector('#tt');
+  // Get the table head element
+const tableHead = document.querySelector('.table thead');
 
   function givee(){
 	let data={
@@ -504,7 +528,12 @@
 postData('http://localhost:3000/send-email',data)
   }
 
-let city=["Delhi", "Amritsar", "Ludhiana", "Chandigarh", "Kundli", "Zirakpur","Faridabad"]
+// let city=["Delhi", "Amritsar", "Ludhiana", "Chandigarh", "Kundli", "Zirakpur","Faridabad"]
+let city=["Delhi", "Amritsar", "Ludhiana", "Chandigarh", "Zirakpur","Faridabad","Haryana","Kurali","Malerkotla","Morinda","Yamuna Nagar","UNA","Jagadhri","Kala Amb","Phillaur",
+"Patiala","Markanda","Radaur","Dhuri","Rampura Phul","Moonak","Nabha","Sirhind","Ahmedgarh","Gobindgarh","Malout","Khanna","Pundri","Panipat","Kurukshetra","Hisar",
+"Parwanoo","Kaithal","Jalandhar","Ambala City","Ner Chowk","Barnala","Karnal","Safidon ","Nawanshahar","Bhawanigarh","Ambala Cantt.","Raikot","Dera Bassi","Ferozepur","Gharaunda","Ladwa","Moga","Tahliwal","Anandpur Sahib",
+"Ismailbad","Mehatpur","Pehowa","Nangal","Dharmkanta","Mohali","Meerut ","Baddi","Goraya","Kaithal","Phagwara","Hoshiarpur","Panchkula","Barwala",
+"Sunam","Bathinda","Assandh","Lalru","Kotkapura","Talwara" ]
 for (let i = 0; i < city.length; i++) {
 	const newElement = document.createElement('div');
 	newElement.textContent = city[i]
@@ -517,6 +546,19 @@ for (let i = 0; i < city.length; i++) {
 		hiddenDiv.style.display="none" 
 	})
 }
+// const add=[
+// 	    {address:"Plot No. 120, Transport Nagar, Ludhiana",                   city:"Ludhiana",contact:"7888529411"},
+//         {address:"Plot No. 21, Transport Nagar, Jahajgarh, Amritsar",         city:"Amritsar",contact:"9417422577"},
+// 		{address:"Near Ramada Hotel, Ambala Chandigarh Highway, Zirakpur.",   city:"Zirakpur",contact:"8968421077"},
+// 		{address:"Gagan Chowk Bye-Pass, NH-1, Rajpura",                       city:"Rajpura", contact:"9417282699"},
+// 		{address:"Plot No. 10, Transport Area, Sector-26, Chandigarh",        city:"Chandigarh",contact:"9417191006"},
+// 		{address:"4144-45, Naya Bazar, Delhi",                                city:"Delhi",   contact:"7011719699"},
+// 		{address:"AG-16, Sanjay Gandhi Transport Nagar, Delh",                city:"Delhi",   contact:"9899656120"},
+// 		{address:"Shop No. 6, CSC Market, Punjabi Bagh Transport Area, Delhi",city:"Delhi",   contact:"7011719699"},
+// 		{address:"Kundli Border, Near Canara Bank, Kundli",                   city:"Kundali",   contact:"9306735473"},
+// 		{address:"Pillar No. 692, Opposite Metro, Old Faridabad",             city:"Faridabad",   contact:"9818691997"},
+// 		{address:"Gee Mandi, Near Shhvalavir Van",                            city:"Amritsar",   contact:"9417422577"},
+// 	]
 const add=[
 	    {address:"Plot No. 120, Transport Nagar, Ludhiana",                   city:"Ludhiana",contact:"7888529411"},
         {address:"Plot No. 21, Transport Nagar, Jahajgarh, Amritsar",         city:"Amritsar",contact:"9417422577"},
@@ -529,6 +571,124 @@ const add=[
 		{address:"Kundli Border, Near Canara Bank, Kundli",                   city:"Kundali",   contact:"9306735473"},
 		{address:"Pillar No. 692, Opposite Metro, Old Faridabad",             city:"Faridabad",   contact:"9818691997"},
 		{address:"Gee Mandi, Near Shhvalavir Van",                            city:"Amritsar",   contact:"9417422577"},
+		{address:"Sco 15 Sec-3, Hassidc industrial arra Karnal, Pin-132001", city:"Karnal", contact:"7988350332, 9518264614"},
+		{address:"Dhanoula Road Pin-148101", city:"Barnala", contact:"9872830484, 01679500000"},
+		{address:"Near Gulati Dharam Kaanta, Kuldeep Nagar, Pin-133001", city:"Ambala Cantt.", contact:"9996638510, 9466738510"},
+		{address:"Sangrur Road Pin-148026", city:"Bhawanigarh", contact:"9814407597, 6283150357"},
+		{address:"D22 industrial area focal point nawanshahar", city:"Nawanshahar", contact:"9814067354, 9814620354"},
+		{address:"Gali No. 4 Subzi Mandi ", city:"Safidon ", contact:"9215000560, 01686263229"},
+		{address:"Plot No. 620 Sec-16, Saraswati Vihar, Adjoing Sukhmani Engg. College Gate Building on Highway , Pin-140507", city:"Dera Bassi", contact:"9876727347, 7901799827, 7696086827"},
+		{address:"New Sabzi Mandi, Grain Market, Malerkotla Road, Pin-141109", city:"Raikot", contact:"9417418161, 9463792703"},
+		{address:"Plot No. 159 Industrial Area", city:"Ferozepur", contact:"9915918659, 9417366367"},
+		{address:"Raghuveer Vihar Colony Near MRF Tyre Showroom G.T Road Shop No.8", city:"Gharaunda", contact:"8053537600, 8708142798, 9518174346"},
+		{address:"Pipli Road Near Gaushala, Pin -136132", city:"Ladwa", contact:"9254100654"},
+		{address:"Near Sahib Hotel Main Road, Pin-140118", city:"Anandpur Sahib", contact:"9876916662, 9876568986"},
+		{address:"Majestic Road", city:"Moga", contact:"9814529735"},
+		{address:"Haroli Road Near Water Supply , Pin-174301", city:"Tahliwal", contact:"9816439994"},
+		{address:"Shop No. 39 Ajouli Morh Market, Near HDFC Bank , Pin- 140126", city:"Nangal", contact:"9023970001"},
+		{address:"Near old L I C Office Kaithal Road, Pin-136128", city:"Pehowa", contact:"9215638506"},
+		
+		{address:"R/O 34 Ind. Area", city:"Mehatpur", contact:"9418465821"},
+		{address:"Sant Nagar, Pin -136129", city:"Ismailbad", contact:"9878802860"},
+		{address:"Delhi Road, Near Atlas Dharmkanta", city:"Dharmkanta", contact:"9639724021, 901223508, 8394810810"},
+		{address:"Sector-121 Opp Rikhy Farm Back Side Old Balongi Barrier Village Badmajra ", city:"Mohali", contact:"982767793, 9988700093, 7658000057, 8727870993"},
+		{address:"288,289 Transport Nagar", city:"Meerut ", contact:"9997097815"},
+		{address:"Shop No.96-98 Modern Complex Sai Road Baddi Distt Solan", city:"Baddi", contact:"9318008522, 9816007872, 9872766471"},
+		{address:"Near Saini Dhaba G.T Road ", city:"Goraya", contact:"9780100796, 987601796"},
+		{address:"Behind Shiv Vatika Kaithal", city:"Kaithal", contact:"9896854600, 9416473624, 9416365196"},
+		{address:"G.T Road Near PNB Bank ", city:"Phagwara", contact:"9814767899"},
+		{address:"Fireworks Market, Maorinda Road", city:"Kurali", contact:"9781068768"},
+		{address:"Bassi Khawaju", city:"Hoshiarpur", contact:"9463222213"},
+		{address:"Plot No. 340 Industrial Area Phase 1 ", city:"Panchkula", contact:"9463961346, 9988949839, 0172-2566479"},
+		{address:"Plot No. 112, Industrial Area HSIIDC Alipur Barwala", city:"Barwala", contact:"9463961346, 996642215"},
+		{address:"-", city:"Assandh", contact:"9050002555, 9255274043"},
+		{address:"Galli No. 7, Guru Gobind Singh Nagar Bathinda", city:"Bathinda", contact:"9417040576, 9023840576, 8054934876"},
+		{address:"Bathinda Road", city:"Sunam", contact:"9815184940, 8437800297"},
+		{address:"Khoka Market, Shop No. 26, Pin -144216", city:"Talwara", contact:"9417395223, 9417916162"},
+		{address:"Opp. Railway Rest House Near Shri Ram Ashram", city:"Kotkapura", contact:"98883960659,780900000"},
+		{address:"Ambala Chd Highway", city:"Lalru", contact:"9501000876, 9888312534"},
+		{address:"Near Gupta Palace Jagadhri", city:"Jagadhri", contact:"9812681234"},
+		{address:"0-1, Industrial Area, Pin-135001", city:"Yamuna Nagar", contact:"8708398968, 01732251016, 9350908561"},
+		{address:"Ambala Road Near Lalsinghi Bhola Welding Art", city:"UNA", contact:"8262998377"},
+		{address:"-", city:"Kala Amb", contact:"9416135091, 9996872548"},
+		{address:"Modern Complex Opp. Indane Gas Agency -140101", city:"Morinda", contact:"9888410698, 9463533211"},
+		{address:"-", city:"Phillaur", contact:"9888822303"},
+		{address:"Sanauri Adda Road Near Abbu Shah Ji Dera Lakkar Mandi", city:"Patiala", contact:"8092500007, 6388699370, 7717671714"},
+		{address:"Loha Bazar", city:"Malerkotla", contact:"9815467359, 9855000442"},
+		{address:"Outside old Dana Mandi Near Nayyar Sweat Shop , Pin-144601", city:"Kapurthala", contact:"9814730061"},
+		{address:"G.T Road, Nr. Ladwa Chowk, Shahabad Markanda Distt. Kurukshetra", city:"Markanda", contact:"9812139150,98696213211"},
+		{address:"Trivani Chowk Pin-135133", city:"Radaur", contact:"9813148235, 9991539915"},
+		{address:"Near Bypass Sangrur Road Dhuri", city:"Dhuri", contact:"8437200297, 8437600297"},
+		{address:"Near Nirankari Bhawan Barnala Road", city:"Rampura Phul", contact:"9417351931, 9417561944"},
+		{address:"Old Bus Stand Moonak, Pin-148033", city:"Moonak", contact:"9357401014"},
+		{address:"Kali Mata Mandir road, Duladi Gate", city:"Nabha", contact:"9872003088, 9878603088, 9501026688"},
+		{address:"New Anaj Mandi Shop No 118, Pin - 140406", city:"Sirhind", contact:"9417811883, 9417013692"},
+		{address:"Near Railway Station Ahmedgarh , Pin-148021", city:"Ahmedgarh", contact:"7814444833"},
+		
+		
+		
+    {
+        address: "Nasrali Road, Mandi Pin, 147301",
+        city: "Gobindgarh",
+        contact: "9815809954, 9815300206"
+    },
+    {
+        address: "Near Truck Union GT Road",
+        city: "Malout",
+        contact: "9417406710, 9417390228"
+    },
+    {
+        address: "Shop No. 37 Shivaji Complex Railway Road",
+        city: "Khanna",
+        contact: "9814226896,8725841041"
+    },
+    {
+        address: "Main Chowk, Pundri, Distt. Kaithal",
+        city: "Pundri",
+        contact: "9355789000, 9017207300"
+    },
+    {
+        address: "Plot No. 209A Sector -25 Part 1",
+        city: "Panipat",
+        contact: "9671100077, 9069200007"
+    },
+    {
+        address: "Red Road Jyoti Nagar",
+        city: "Kurukshetra",
+        contact: "9896070333, 9812280632"
+    },
+    {
+        address: "Plot No. 91, Vikas Nagar opp guru Jambeshwar University, Barwala Road",
+        city: "Hisar",
+        contact: "7777001077, 7357112612"
+    },
+    {
+        address: "G.T. Road Near Ladwa Chowk Shahabad Markanda",
+        city: "Markanda",
+        contact: "98122139153, 9896213211"
+    },
+    {
+        address: "Distt. Mandi",
+        city: "Ner Chowk",
+        contact: "9418295426"
+    },
+    {
+        address: "Plot No. 79 Opp New Subji Mandi",
+        city: "Ambala City",
+        contact: "9896130756"
+    },
+
+
+    {
+        address: "Bharat Carrier Building Opp Cargo Motors Pvt Ltd, Patel Chowk, Pin-144008",    city: "Jalandhar",contact: "9814228629,9814785306,9872583955"
+    },
+    {
+        address: "Behind Shiv Vatika Kaithal",city: "Kaithal",contact: "9416473624, 9416365196"
+    },
+    {
+        address: "Shop No. 1,2 sec-1",city: "Parwanoo",contact: "9417659346, 8219470392"
+    }
+
 	]
 let give=[]
 
@@ -547,6 +707,7 @@ let give=[]
 	addr.innerHTML=''
 	give=[]
 	console.log("bye");
+
 
  give=add.map((i)=>{
 	if(i.city.includes((inputField.value).toLowerCase()) || i.city.includes((inputField.value)) ){
@@ -573,8 +734,9 @@ let give=[]
 })
 table.style.display="table"
 
-  }
-  give.map((i)=>{
+
+
+give.map((i)=>{
 	const newElement = document.createElement('tr');
 	newElement.style.height="40px"
 	newElement.innerHTML +=`
@@ -584,9 +746,57 @@ table.style.display="table"
 						  `
 				addr.appendChild(newElement)
 })
-    // Toggle the visibility of the hidden div
-    
+//checker
+ // Toggle the visibility
+ if (filteredArray.length > 0) {
+                table.style.display = "table";
+                tableHead.style.display = "table-header-group";
+            } else {
+                table.style.display = "none";
+                tableHead.style.display = "none";
+            }
+// Show the table
+table.style.display = 'block';
+  }
   
+  
+const add1 = [
+            { address: "Plot No. 120, Transport Nagar, Ludhiana", city: "Ludhiana", contact: "7888529411" },
+            { address: "Plot No. 21, Transport Nagar, Jahajgarh, Amritsar", city: "Amritsar", contact: "9417422577" },
+            { address: "Near Ramada Hotel, Ambala Chandigarh Highway, Zirakpur.", city: "Zirakpur", contact: "8968421077" },
+            { address: "Gagan Chowk Bye-Pass, NH-1, Rajpura", city: "Rajpura", contact: "9417282699" },
+            { address: "Plot No. 10, Transport Area, Sector-26, Chandigarh", city: "Chandigarh", contact: "9417191006" },
+            { address: "4144-45, Naya Bazar, Delhi", city: "Delhi", contact: "7011719699" },
+            { address: "AG-16, Sanjay Gandhi Transport Nagar, Delh", city: "Delhi", contact: "9899656120" },
+            { address: "Shop No. 6, CSC Market, Punjabi Bagh Transport Area, Delhi", city: "Delhi", contact: "7011719699" },
+            { address: "Kundli Border, Near Canara Bank, Kundli", city: "Kundali", contact: "9306735473" },
+            { address: "Pillar No. 692, Opposite Metro, Old Faridabad", city: "Faridabad", contact: "9818691997" },
+            { address: "Gee Mandi, Near Shhvalavir Van", city: "Amritsar", contact: "9417422577" }
+        ];
+
+        
+		console.log("hellogrid2");
+
+		window.onload = function() {
+			console.log("hellogrid");
+			
+			const gridContainer = document.getElementById('gridContainer');
+
+            add1.slice(0,9).forEach((entry,index) => {
+                // Create grid item
+                const gridItem = document.createElement('div');
+                gridItem.className = 'col-md-4 mb-4 grid-item';
+                gridItem.innerHTML = `
+                    <div class="p-2" style="background-color: #f9f9f9;  border-radius: 5px;height: 170px;text-align: center;
+    ">
+                        <p style="font-size: 18px;margin-bottom: 5px;text-align: center"><strong>${entry.city}</strong> </p>
+						<p style="font-size: 15px;margin-bottom: 5px;"><strong>Address:</strong> ${entry.address}</p>
+                        <p style="font-size: 15px;margin-bottom: 5px;"><strong>Contact:</strong> ${entry.contact}</p>
+                    </div>
+                `;
+                gridContainer.appendChild(gridItem);
+            });
+        }
 
 		</script>
 

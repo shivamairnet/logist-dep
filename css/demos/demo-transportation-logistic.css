@@ -7,11 +7,11 @@
 }
 
 .custom-font-size-1 {
-		font-size: 80px;
+		font-size: 50px;
 }
 
 p {
-		color: #999;
+		color: #777;
 }
 
 .custom-heading-1 {
@@ -65,7 +65,7 @@ p {
 .custom-drop-caps .custom-drop-caps-number {
 		font-weight: bold;
 		float: left;
-		font-size: 90px;
+		font-size: 70px;
 		line-height: 90px;
 		padding: 0;
 		margin-right: 15px;

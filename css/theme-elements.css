@@ -23,7 +23,7 @@ Theme Version:	9.9.2
 }
 
 .accordion .card-title {
-	font-size: 16px;
+	font-size: 17px;
 }
 
 .accordion .card-header {
@@ -246,9 +246,9 @@ Theme Version:	9.9.2
 }
 
 /* Transitions */
-.transition-2ms {
+/* .transition-2ms {
 	transition: all 0.2s ease-in-out;
-}
+} */
 
 .transition-3ms {
 	transition: all 0.3s ease-in-out;
@@ -3304,6 +3304,7 @@ html.sticky-header-active .hamburguer-btn.hamburguer-btn-sticky-dark .close span
 	width: 100%;
 	margin-top: 0;
 	transform: translate3d(0, -50%, 0);
+	
 }
 
 .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
@@ -3330,6 +3331,7 @@ html.sticky-header-active .hamburguer-btn.hamburguer-btn-sticky-dark .close span
 	position: relative;
 	left: -1px;
 	top: -1px;
+	
 }
 
 .owl-carousel .owl-nav button.owl-next {
@@ -4089,7 +4091,7 @@ html.sticky-header-active .hamburguer-btn.hamburguer-btn-sticky-dark .close span
 
 .owl-carousel.nav-dark.nav-style-1 .owl-nav .owl-next,
 .owl-carousel.nav-dark.nav-style-1 .owl-nav .owl-prev {
-	color: #212529 !important;
+	color: #f5f7f8 !important;
 }
 
 .owl-carousel.nav-dark.nav-style-2 .owl-nav .owl-next:before, .owl-carousel.nav-dark.nav-style-2 .owl-nav .owl-next:after,
@@ -16615,7 +16617,7 @@ html.gecko .sort-destination.sort-destination-margin > [class*="col-"] {
 	position: absolute;
 	z-index: 2;
 	max-width: 90%;
-	font-size: 17px;
+	font-size: 18px;
 	padding: 13px 21px 2px;
 	bottom: 13%;
 }
@@ -17766,6 +17768,10 @@ p {
 	color: #777;
 	line-height: 26px;
 	margin: 0 0 20px;
+	
+
+
+
 }
 
 p.featured {

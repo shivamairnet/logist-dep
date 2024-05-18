@@ -20,7 +20,7 @@ body {
 	background-color: #FFF;
 	color: #777;
 	font-family: "Poppins", Arial, sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 26px;
 	margin: 0;
 }
@@ -110,7 +110,7 @@ pre {
 #header .header-body {
 	display: flex;
 	flex-direction: column;
-	background: #FFF;
+	background: #f8f6f6;
 	transition: min-height 0.3s ease;
 	width: 100%;
 	border-top: 3px solid #EDEDED;
@@ -6200,18 +6200,18 @@ h6 .inverted {
 	font-size: .9em !important;
 }
 
-.text-2-3,
+/* .text-2-3,
 .text-2-5 {
 	font-size: .95em !important;
-}
+} */
 
 .text-3 {
-	font-size: 1em !important;
+	font-size: 0.85em !important;
 }
 
 .text-3-4,
 .text-3-5 {
-	font-size: 1.1em !important;
+	font-size: 1.3em !important;
 }
 
 .text-4 {
@@ -6223,7 +6223,7 @@ h6 .inverted {
 }
 
 .text-5 {
-	font-size: 1.50em !important;
+	font-size: 1.10em !important;
 }
 
 .text-5-6,
@@ -6245,11 +6245,11 @@ h6 .inverted {
 }
 
 .text-8 {
-	font-size: 2.30em !important;
+	font-size: 1.9em !important;
 }
 
 .text-9 {
-	font-size: 2.50em !important;
+	font-size: 1.9em !important;
 }
 
 .text-10 {
@@ -6788,7 +6788,7 @@ h6 .inverted {
 }
 
 .line-height-4 {
-	line-height: 1.4 !important;
+	line-height: 1.1 !important;
 }
 
 .line-height-5 {
@@ -7602,9 +7602,9 @@ h6 .inverted {
 	text-decoration: none !important;
 }
 
-.text-decoration-underline {
+/* .text-decoration-underline {
 	text-decoration: underline !important;
-}
+} */
 
 .text-decoration-underline-2 {
 	text-decoration: none !important;
@@ -7618,9 +7618,9 @@ h6 .inverted {
 }
 
 /* Text Transform */
-.text-uppercase {
+/* .text-uppercase {
 	text-transform: uppercase !important;
-}
+} */
 
 .text-lowercase {
 	text-transform: lowercase !important;
@@ -7916,10 +7916,10 @@ a.text-light:focus, a.text-light:hover {
 	font-weight: 500 !important;
 }
 
-.font-weight-semibold,
+/* .font-weight-semibold,
 .font-weight-semi-bold {
 	font-weight: 600 !important;
-}
+} */
 
 .font-weight-bold {
 	font-weight: 700 !important;

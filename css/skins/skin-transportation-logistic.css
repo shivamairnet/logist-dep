@@ -8,6 +8,7 @@
 	background: #099fdc;
 }
 
+
 :root {
 	--primary: #099fdc;
 	--secondary: #0b6afb;
@@ -31,10 +32,10 @@ a:active {
 	color: #088dc4;
 }
 
-html .text-color-primary,
+/* html .text-color-primary,
 html .text-primary {
 	color: #099fdc !important;
-}
+} */
 
 html .text-color-hover-primary:hover,
 html .text-hover-primary:hover {
@@ -56,10 +57,10 @@ html .text-tertiary {
 	color: #262c36 !important;
 }
 
-html .text-color-hover-tertiary:hover,
+/* html .text-color-hover-tertiary:hover,
 html .text-hover-tertiary:hover {
 	color: #262c36 !important;
-}
+} */
 
 html .text-color-quaternary,
 html .text-quaternary {
@@ -94,6 +95,8 @@ html .text-hover-light:hover {
 html .svg-fill-color-primary {
 	fill: #099fdc !important;
 }
+
+
 
 html .svg-fill-color-primary svg path,
 html .svg-fill-color-primary svg rect,
