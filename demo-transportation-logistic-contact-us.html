@@ -144,9 +144,20 @@
 
 #gridContainer .grid-item:hover {
     
-    
-	box-shadow: 0 0 10px 5px #099fdc;
+    background-color: #099fdc;
+    color: white;
+	box-shadow: 0 0 10px  #099fdc;
+
+
 }
+
+#gridContainer .grid-item:hover p{
+    
+    
+    color: white;
+	
+}
+
 
         
 	</style>
@@ -169,11 +180,11 @@
 							<div class="header-column">
 								<div class="border-bottom-light w-100">
 									<div class="hstack gap-4 px-4 py-2 font-weight-semi-bold d-none d-lg-flex">
-										<div class="d-none d-lg-inline-block ps-1"><a class="text-color-default text-color-hover-primary text-2" href="#">9815002222</a></div>
-										<div class="vr d-lg-inline-block opacity-2 d-none d-xl-inline-block"></div>
+										<div class="d-none d-lg-inline-block ps-1"><a class="text-color-default text-color-hover-primary text-2" href="#">+919815876777</a></div>
+										<!-- <div class="vr d-lg-inline-block opacity-2 d-none d-xl-inline-block"></div>
 										<div class="d-none d-xl-inline-block"><a class="text-color-default text-color-hover-primary text-2" href="#">thebmt.in</a></div>
 										<div class="vr opacity-2 d-none d-xl-inline-block"></div>
-										<div class="d-none d-xl-inline-block"><span class="text-color-default text-color-hover-primary text-2">Mon — Sat: 9AM — 6PM</span></div>
+										<div class="d-none d-xl-inline-block"><span class="text-color-default text-color-hover-primary text-2">Mon — Sat: 9AM — 6PM</span></div> -->
 										<div class="ms-auto d-none d-lg-inline-block">
 											<ul class="nav nav-pills">
 												<li class="nav-item dropdown">
@@ -248,8 +259,8 @@
 										</div>
 										<div class="vr opacity-2 ms-auto  d-xl-inline-block"></div>
 										<div class="px-4  btt d-xxl-inline-block ws-nowrap">
-											<a href="demo-transportation-logistic-contact-us.html#frm" class="btn border-0 px-4 py-2 line-height-9 btn-tertiary me-2">Request Rate</a>
-											<a href="demo-transportation-logistic-contact-us.html#frm" class="btn border-0 px-4 py-2 line-height-9 btn-primary">Track Order</a>
+											<a href="demo-transportation-logistic-contact-us.html#frm" class="btn border-0 px-4 py-2 line-height-9 btn-tertiary me-2">Our Offices</a>
+											<a href="demo-transportation-logistic-contact-us.html#frm" class="btn border-0 px-4 py-2 line-height-9 btn-primary">Our Agencies</a>
 										</div>
 									</div>
 								</div>
@@ -387,7 +398,7 @@
 					<div class="row pt-5">
 						<div class="col-lg-4">
 							<a href="index.html" class="text-decoration-none">
-								<img src="img/about/WhatsApp Image 2024-05-01 at 2.34.33 PM (1).jpeg" class="img-fluid mb-4" width="140" height="50px">
+								<img src="img/about/WhatsApp Image.jpeg" class="img-fluid mb-4" width="270" height="90px">
 							</a>
 							<p class="text-3-5 pe-lg-2">Transforming logistics with precision receiving, swift shipping, and reliable delivery services. </p>
 							<ul class="list list-unstyled">
@@ -529,10 +540,10 @@ postData('http://localhost:3000/send-email',data)
   }
 
 // let city=["Delhi", "Amritsar", "Ludhiana", "Chandigarh", "Kundli", "Zirakpur","Faridabad"]
-let city=["Delhi", "Amritsar", "Ludhiana", "Chandigarh", "Zirakpur","Faridabad","Haryana","Kurali","Malerkotla","Morinda","Yamuna Nagar","UNA","Jagadhri","Kala Amb","Phillaur",
+let city=["Delhi", "Amritsar", "Ludhiana", "Chandigarh", "Zirakpur","Faridabad","Haryana","Kurali","Malerkotla","Morinda","Yamunanagar","Una","Jagadhri","Kala Amb","Phillaur",
 "Patiala","Markanda","Radaur","Dhuri","Rampura Phul","Moonak","Nabha","Sirhind","Ahmedgarh","Gobindgarh","Malout","Khanna","Pundri","Panipat","Kurukshetra","Hisar",
-"Parwanoo","Kaithal","Jalandhar","Ambala City","Ner Chowk","Barnala","Karnal","Safidon ","Nawanshahar","Bhawanigarh","Ambala Cantt.","Raikot","Dera Bassi","Ferozepur","Gharaunda","Ladwa","Moga","Tahliwal","Anandpur Sahib",
-"Ismailbad","Mehatpur","Pehowa","Nangal","Dharmkanta","Mohali","Meerut ","Baddi","Goraya","Kaithal","Phagwara","Hoshiarpur","Panchkula","Barwala",
+"Parwanoo","Jalandhar","Ambala City","Ner Chowk","Barnala","Karnal","Safidon ","Nawanshahr","Bhawanigarh","Ambala Cantt.","Raikot","Dera Bassi","Ferozepur","Gharaunda","Ladwa","Moga","Tahliwal","Anandpur Sahib",
+"Ismailabad","Mehatpur","Pehowa","Nangal","Dharamkanta","Mohali","Meerut ","Baddi","Goraya","Kaithal","Phagwara","Hoshiarpur","Panchkula","Barwala",
 "Sunam","Bathinda","Assandh","Lalru","Kotkapura","Talwara" ]
 for (let i = 0; i < city.length; i++) {
 	const newElement = document.createElement('div');
@@ -566,17 +577,17 @@ const add=[
 		{address:"Gagan Chowk Bye-Pass, NH-1, Rajpura",                       city:"Rajpura", contact:"9417282699"},
 		{address:"Plot No. 10, Transport Area, Sector-26, Chandigarh",        city:"Chandigarh",contact:"9417191006"},
 		{address:"4144-45, Naya Bazar, Delhi",                                city:"Delhi",   contact:"7011719699"},
-		{address:"AG-16, Sanjay Gandhi Transport Nagar, Delh",                city:"Delhi",   contact:"9899656120"},
+		{address:"AG-16, Sanjay Gandhi Transport Nagar, Delhi",                city:"Delhi",   contact:"9899656120"},
 		{address:"Shop No. 6, CSC Market, Punjabi Bagh Transport Area, Delhi",city:"Delhi",   contact:"7011719699"},
-		{address:"Kundli Border, Near Canara Bank, Kundli",                   city:"Kundali",   contact:"9306735473"},
+		{address:"Kundli Border, Near Canara Bank, Kundli",                   city:"Kundli",   contact:"9306735473"},
 		{address:"Pillar No. 692, Opposite Metro, Old Faridabad",             city:"Faridabad",   contact:"9818691997"},
-		{address:"Gee Mandi, Near Shhvalavir Van",                            city:"Amritsar",   contact:"9417422577"},
+		{address:"Gee Mandi, Near Shivalik Van",                            city:"Amritsar",   contact:"9417422577"},
 		{address:"Sco 15 Sec-3, Hassidc industrial arra Karnal, Pin-132001", city:"Karnal", contact:"7988350332, 9518264614"},
 		{address:"Dhanoula Road Pin-148101", city:"Barnala", contact:"9872830484, 01679500000"},
 		{address:"Near Gulati Dharam Kaanta, Kuldeep Nagar, Pin-133001", city:"Ambala Cantt.", contact:"9996638510, 9466738510"},
 		{address:"Sangrur Road Pin-148026", city:"Bhawanigarh", contact:"9814407597, 6283150357"},
-		{address:"D22 industrial area focal point nawanshahar", city:"Nawanshahar", contact:"9814067354, 9814620354"},
-		{address:"Gali No. 4 Subzi Mandi ", city:"Safidon ", contact:"9215000560, 01686263229"},
+		{address:"D22 industrial area focal point Nawanshahr", city:"Nawanshahr", contact:"9814067354, 9814620354"},
+		{address:"Gali No. 4 Subzi Mandi ", city:"Safidon", contact:"9215000560, 01686263229"},
 		{address:"Plot No. 620 Sec-16, Saraswati Vihar, Adjoing Sukhmani Engg. College Gate Building on Highway , Pin-140507", city:"Dera Bassi", contact:"9876727347, 7901799827, 7696086827"},
 		{address:"New Sabzi Mandi, Grain Market, Malerkotla Road, Pin-141109", city:"Raikot", contact:"9417418161, 9463792703"},
 		{address:"Plot No. 159 Industrial Area", city:"Ferozepur", contact:"9915918659, 9417366367"},
@@ -589,8 +600,8 @@ const add=[
 		{address:"Near old L I C Office Kaithal Road, Pin-136128", city:"Pehowa", contact:"9215638506"},
 		
 		{address:"R/O 34 Ind. Area", city:"Mehatpur", contact:"9418465821"},
-		{address:"Sant Nagar, Pin -136129", city:"Ismailbad", contact:"9878802860"},
-		{address:"Delhi Road, Near Atlas Dharmkanta", city:"Dharmkanta", contact:"9639724021, 901223508, 8394810810"},
+		{address:"Sant Nagar, Pin -136129", city:"Ismailabad", contact:"9878802860"},
+		{address:"Delhi Road, Near Atlas Dharamkanta", city:"Dharamkanta", contact:"9639724021, 901223508, 8394810810"},
 		{address:"Sector-121 Opp Rikhy Farm Back Side Old Balongi Barrier Village Badmajra ", city:"Mohali", contact:"982767793, 9988700093, 7658000057, 8727870993"},
 		{address:"288,289 Transport Nagar", city:"Meerut ", contact:"9997097815"},
 		{address:"Shop No.96-98 Modern Complex Sai Road Baddi Distt Solan", city:"Baddi", contact:"9318008522, 9816007872, 9872766471"},
@@ -608,8 +619,8 @@ const add=[
 		{address:"Opp. Railway Rest House Near Shri Ram Ashram", city:"Kotkapura", contact:"98883960659,780900000"},
 		{address:"Ambala Chd Highway", city:"Lalru", contact:"9501000876, 9888312534"},
 		{address:"Near Gupta Palace Jagadhri", city:"Jagadhri", contact:"9812681234"},
-		{address:"0-1, Industrial Area, Pin-135001", city:"Yamuna Nagar", contact:"8708398968, 01732251016, 9350908561"},
-		{address:"Ambala Road Near Lalsinghi Bhola Welding Art", city:"UNA", contact:"8262998377"},
+		{address:"0-1, Industrial Area, Pin-135001", city:"Yamunanagar", contact:"8708398968, 01732251016, 9350908561"},
+		{address:"Ambala Road Near Lalsinghi Bhola Welding Art", city:"Una", contact:"8262998377"},
 		{address:"-", city:"Kala Amb", contact:"9416135091, 9996872548"},
 		{address:"Modern Complex Opp. Indane Gas Agency -140101", city:"Morinda", contact:"9888410698, 9463533211"},
 		{address:"-", city:"Phillaur", contact:"9888822303"},
@@ -766,12 +777,15 @@ const add1 = [
             { address: "Near Ramada Hotel, Ambala Chandigarh Highway, Zirakpur.", city: "Zirakpur", contact: "8968421077" },
             { address: "Gagan Chowk Bye-Pass, NH-1, Rajpura", city: "Rajpura", contact: "9417282699" },
             { address: "Plot No. 10, Transport Area, Sector-26, Chandigarh", city: "Chandigarh", contact: "9417191006" },
-            { address: "4144-45, Naya Bazar, Delhi", city: "Delhi", contact: "7011719699" },
-            { address: "AG-16, Sanjay Gandhi Transport Nagar, Delh", city: "Delhi", contact: "9899656120" },
-            { address: "Shop No. 6, CSC Market, Punjabi Bagh Transport Area, Delhi", city: "Delhi", contact: "7011719699" },
-            { address: "Kundli Border, Near Canara Bank, Kundli", city: "Kundali", contact: "9306735473" },
+            { address: "4144-45, Naya Bazar, Delhi", city: "Delhi", contact: "7011719699,011-46013881" },
+            { address: "AG-16, Sanjay Gandhi Transport Nagar, Delhi", city: "Delhi", contact: "9899656120,011-43549401" },
+            { address: "Shop No. 6, CSC Market, Punjabi Bagh Transport Area, Delhi", city: "Delhi", contact: "7011719699,011-47092827" },
+            { address: "Kundli Border, Near Canara Bank, Kundli", city: "Kundli", contact: "9306735473" },
             { address: "Pillar No. 692, Opposite Metro, Old Faridabad", city: "Faridabad", contact: "9818691997" },
-            { address: "Gee Mandi, Near Shhvalavir Van", city: "Amritsar", contact: "9417422577" }
+            { address: "Ghee Mandi, Near Shiv Dulari Van", city: "Amritsar", contact: "9417422577" },
+			{ address: "Mountgomery Compound, UP Border", city: "Ghaziabad", contact: "9810812316" },
+			
+			
         ];
 
         
@@ -782,16 +796,15 @@ const add1 = [
 			
 			const gridContainer = document.getElementById('gridContainer');
 
-            add1.slice(0,9).forEach((entry,index) => {
+            add1.slice(0,15).forEach((entry,index) => {
                 // Create grid item
                 const gridItem = document.createElement('div');
                 gridItem.className = 'col-md-4 mb-4 grid-item';
                 gridItem.innerHTML = `
-                    <div class="p-2" style="background-color: #f9f9f9;  border-radius: 5px;height: 170px;text-align: center;
-    ">
-                        <p style="font-size: 18px;margin-bottom: 5px;text-align: center"><strong>${entry.city}</strong> </p>
-						<p style="font-size: 15px;margin-bottom: 5px;"><strong>Address:</strong> ${entry.address}</p>
-                        <p style="font-size: 15px;margin-bottom: 5px;"><strong>Contact:</strong> ${entry.contact}</p>
+                    <div class="p-2" ; border-radius: 5px;height: 160px;text-align: center;">
+                        <p style="font-size: 21px;margin-bottom: 5px;text-align: center"><strong>${entry.city}</strong> </p>
+						<p style="font-size: 18px;margin-bottom: 5px;"><strong>Address:</strong> ${entry.address}</p>
+                        <p style="font-size: 18px;margin-bottom: 5px;"><strong>Contact:</strong> ${entry.contact}</p>
                     </div>
                 `;
                 gridContainer.appendChild(gridItem);
