@@ -94,6 +94,22 @@
 			}
 			
 		}
+
+		/* Add CSS styles for mobile responsiveness */
+@media (max-width: 568px) {
+    .cascading-images {
+        text-align: center;
+		margin-bottom: 160px; /* Center images on mobile */
+    }
+    .cascading-images img {
+        width: 100%; /* Make images responsive */
+        max-width: 100%; /* Ensure images don't overflow container */
+        margin-bottom: 20px; /* Add some space between images */
+    }
+    .cl {
+        grid-template-columns: auto; /* Change grid to single column on mobile */
+    }
+}
 	
 		/* 	p-3 {
     border-radius: 10px;
@@ -282,7 +298,7 @@
 								<div class="position-absolute w-100" style="top: 75%; left: 100%; transform: translate(-50%, 0);">
 									<img src="img/About_Us_Images/About_Us(3).jpg" class="appear-animation" width="400" alt="" data-appear-animation="expandIn" data-appear-animation-delay="300" data-appear-animation-duration="600ms" />
 								</div>
-								<div class="position-absolute w-100" style="top: 165%; left: 50%; transform: translate(-50%, 0);">
+								<div class="position-absolute w-100" style="top: 155%; left: 50%; transform: translate(-50%, 0);">
 									<img src="img/About_Us_Images/About_Us(2).jpg" class="appear-animation" width="400" alt="" data-appear-animation="expandIn" data-appear-animation-delay="600" data-appear-animation-duration="600ms" />
 								</div>
 							</div>
@@ -293,10 +309,10 @@
 				</div>
 
 				
-				<section class="section border-0 bg-light  p-0" style="margin-top: 30px;">
+				<section class="section border-0 bg-light  p-0" style="margin-top: 60px;">
 					
 					<div class="container py-5 mt-4 d-flex flex-column justify-content-center align-items-center">
-						<p class="text-center" style="font-size: 30px; font-weight: bold; color: black;">Our Core Principles</p>
+						<p class="text-center" style="font-size: 30px; font-weight: bold; color: black; margin-top: 50px;">Our Core Principles</p>
 						<div class="mt-4 cl" style="display: grid; grid-template-columns: auto auto; gap: 20px; ">
 							<div class="p-3" style="border-radius: 10px; border: 3px solid #16b5f5;"><p class="text-center text-black fw-bold" style="font-size: 20px">Our Legacy</p>     <p class="text-center">For nearly nine decades, The Bharat Motor Transport co. has been at the forefront of India's transportation and logistics landscape, witnessing and actively participating in the country's economic evolution. Our journey is marked by milestones of growth, resilience, and a relentless pursuit of excellence. From humble beginnings, we have grown into a trusted name synonymous with efficiency.</p></div>
 							<div class="p-3" style="border-radius: 10px; border: 3px solid #16b5f5;"><p class="text-center text-black fw-bold" style="font-size: 20px">Our Commitment</p> <p class="text-center">As pioneers in the transportation and logistics industry, we are committed to upholding the highest standards of professionalism, safety, and environmental responsibility. Our team of seasoned professionals is dedicated to providing personalized service, innovative solutions, and unparalleled reliability, ensuring that your cargo reaches its destination safely and efficiently, every time.</p></div>

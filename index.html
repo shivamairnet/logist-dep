@@ -111,15 +111,25 @@
 			.btt{
 				display: none !important;
 			}
-			.ftl{
+			/* .ftl{
 				display: none !important;
-			}
+			} */
 
 			.carousel-half-full-width-wrapper .card {
              min-height: auto; /* Adjust for smaller screens */
+			 
             }
             
-			
+			/* Media query for small screens */
+@media (max-width: 767px) {
+    .carousel-half-full-width-right {
+        width: 100%; /* Set carousel width to 100% on small screens */
+    }
+    .carousel-half-full-width-right .card {
+        width: 90%; /* Adjust card width as needed to fit within viewport */
+    }
+}
+
 
 
 		}
@@ -130,10 +140,17 @@
         background-position: center;
         background-size: cover;
     }
+	.owl-carousel .card {
+    transform: none !important; /* Override any existing rotation */
+}
 
 
 /* Ensure the cards and carousel are properly spaced on mobile */
 @media (max-width: 576px) {
+	.owl-carousel .card {
+    transform: none !important; /* Override any existing rotation */
+}
+
     .custom-carousel-1 .card {
         margin-bottom: 15px; /* Add some margin at the bottom of each card */
     }
@@ -214,6 +231,9 @@
             height: 100%;
             object-fit: cover; /* Ensure the image covers the whole area */
         }
+		.owl-stage-outer{
+			height: 310px !important;
+		}
 	</style>
 	<body data-plugin-page-transition>
 
@@ -535,7 +555,18 @@
 						</div>
 						<div class="col-lg-8">
 							<div class="carousel-half-full-width-wrapper carousel-half-full-width-right custom-carousel-1">
-								<div class="owl-carousel owl-theme carousel-half-full-width-right nav-bottom nav-bottom-align-left nav-style-1 nav-light nav-arrows-thin nav-font-size-lg mb-0"  data-plugin-options="{'responsive': {'0': {'items': 1,  'autoplay': true, 'autoplayTimeout': 3000}, '768': {'items': 1,  'autoplay': true, 'autoplayTimeout': 3000}, '992': {'items': 2}, '1200': {'items': 3}}, 'loop': false, 'nav': true, 'dots': false, 'margin': 0}">
+								<div class="owl-carousel owl-theme carousel-half-full-width-right nav-bottom nav-bottom-align-left nav-style-1 nav-light nav-arrows-thin nav-font-size-lg mb-0"  data-plugin-options='{
+									"responsive": {
+										"0": {"items": 1, "autoplay": true, "autoplayTimeout": 3000},
+										"768": {"items": 1, "autoplay": true, "autoplayTimeout": 3000},
+										"992": {"items": 1}, /* Adjusted to display 1 item on medium screens */
+										"1200": {"items": 1} /* Adjusted to display 1 item on large screens */
+									},
+									"loop": false,
+									"nav": true,
+									"dots": false,
+									"margin": 0
+								}'>
 									<div class="anim-hover-translate-top-10px transition-3ms">
 										<div class="card">
 											<div class="card-body p-5">
@@ -590,7 +621,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="ftl anim-hover-translate-top-10px transition-3ms">
+									<div class="anim-hover-translate-top-10px transition-3ms">
 										<div class="card">
 											<div class="card-body p-5">
 												<div class="d-flex flex-row">
