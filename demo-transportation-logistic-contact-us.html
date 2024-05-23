@@ -55,6 +55,17 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+<!-- che -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+   <!-- Include Select2 -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/js/select2.min.js"></script>
+
 	</head>
 
 	</head>
@@ -159,7 +170,52 @@
 }
 
 
+
+
+/* che */
+.container {
+	display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add space between the divs */
+    width: 100%; /* Ensure the container takes up the full width of the parent */
+    }
+
+    .one {
+       
+		display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure the divs take up the full width of the container */
+    }
+
+	.two {
+       
+
+		display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure the divs take up the full width of the container */
+    }
+   
+
+    #generate-pdf {
+        margin-top: 20px; /* Add margin at the top of the download button */
+    }
+
+	label {
+    margin-bottom: 5px; /* Add some space below the labels */
+  }
+	.larger-select {
+    width: 100%; /* Make the dropdown take the full width of its container */
+    padding: 10px; /* Increase padding for a larger clickable area */
+    font-size: 16px; /* Increase font size */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
         
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 10px; /* Add some space above the button */
+  }
 	</style>
 	<body data-plugin-page-transition>
 
@@ -181,10 +237,7 @@
 								<div class="border-bottom-light w-100">
 									<div class="hstack gap-4 px-4 py-2 font-weight-semi-bold d-none d-lg-flex">
 										<div class="d-none d-lg-inline-block ps-1"><a class="text-color-default text-color-hover-primary text-2" href="#">+919815876777</a></div>
-										<!-- <div class="vr d-lg-inline-block opacity-2 d-none d-xl-inline-block"></div>
-										<div class="d-none d-xl-inline-block"><a class="text-color-default text-color-hover-primary text-2" href="#">thebmt.in</a></div>
-										<div class="vr opacity-2 d-none d-xl-inline-block"></div>
-										<div class="d-none d-xl-inline-block"><span class="text-color-default text-color-hover-primary text-2">Mon — Sat: 9AM — 6PM</span></div> -->
+										
 										<div class="ms-auto d-none d-lg-inline-block">
 											<ul class="nav nav-pills">
 												<li class="nav-item dropdown">
@@ -264,8 +317,8 @@
 										</div> -->
 
 										<div class="px-4 btt  d-xxl-inline-block ws-nowrap">
-											<a href="demo-transportation-logistic-contact-us.html#ourofficesfocus" class="btn border-0 px-4 py-2 line-height-9 btn-tertiary me-2" >Our Offices</a>
-											<a href="demo-transportation-logistic-contact-us.html#ouragenciesfocus" class="btn border-0 px-4 py-2 line-height-9 btn-primary" >Our Agencies</a>
+											<!-- <a href="demo-transportation-logistic-contact-us.html#ourofficesfocus" class="btn border-0 px-4 py-2 line-height-9 btn-tertiary me-2" >Our Offices</a> -->
+											<a href="demo-transportation-logistic-contact-us.html#ouragenciesfocus" class="btn border-0 px-4 py-2 line-height-9 btn-tertiary" >Our Company Offices</a>
 										
 											
 											
@@ -297,34 +350,41 @@
 					</section>
 				</div>
 
-				<div class="container">
-					<div class="row  my-3">
-						<div class="col mx-5" >
-							
-                                
+			
+			<div class="container" >
 
-                               
-                                
-                                <div class="row" id="ouragenciesfocus">
-                                    <div class="form-group col mb-0 d-flex">
-										
-                                        <input onclick="show()" type="text" class="px-4" id="inputField"  style="width: 80%; height: 50px;" placeholder="Search Cities">
-										<button onclick="filt()" class="btn btn-tertiary border-0 text-3 font-weight-semi-bold btn-px-5   d-md-inline-block"  style="height: 50px;">Search</button>
-									
-                                    </div>
-									
-                                </div>
-								
-								<div id="hiddenDiv"  style= "overflow: auto; width: 80%; border: 1px solid grey; height: 160px; border-radius: 0px 0px 10px 10px; display: none;">
-									<!-- cities -->
-								</div>
-                           
-						</div>
-					</div>
+				<div class="container pt-4 mt-3 pb-3">
+					<h2 class="text-center mb-4">Search Offices</h2>
+					
 				</div>
 
-				
+				<div class="one" id="ouragenciesfocus">
+					<label for="state-select" >Select State:</label>
+					<select id="state-select" class="form-control larger-select">
+						<option value=""> Select State </option>
+						<option value="Delhi">Delhi</option>
+						<option value="Haryana">Haryana</option>
+						<option value="Punjab">Punjab</option>
+						
+						
+					</select>
+				</div>
+			
+				<div class="two">
+					<label for="city-select">Select City:</label>
+					<select id="city-select" class="form-control larger-select">
+						<option value=""> Select City </option>
+					</select>
+					
+				</div>
 
+				<div class="button-container">
+					
+					<button id="search-button" onclick="filt()" class="btn btn-tertiary border-0 text-3 font-weight-semi-bold btn-px-5 d-md-inline-block" style="height: 40px;">Search</button>
+				</div>
+
+
+				
 				<section class="border-0 p-relative pb-2">
 					<div class="container pt-5 mt-3 pb-3" >
 						<div class="row" id="ourofficesfocus">
@@ -347,8 +407,29 @@
 					</div>
 
 					
-
+					<!-- <div class="three" style="margin-top: 10px; display: flex; justify-content: flex-end;">
+						<button id="generate-pdf" class="btn btn-tertiary border-0 text-3 font-weight-semi-bold btn-px-3 d-md-inline-block" style="height: 40px;">Download</button>
+					</div> -->
 				</section>
+			</div>
+			   </div>
+									
+                                </div>
+								
+								<div id="hiddenDiv"  style= "overflow: auto; width: 80%; border: 1px solid grey; height: 160px; border-radius: 0px 0px 10px 10px; display: none;">
+									<!-- cities -->
+								</div>
+                           
+						</div>
+					</div>
+				</div>
+
+				
+
+				
+					
+
+		
 				<hr>
 
 				<section class="border-0 p-relative pb-2">
@@ -503,6 +584,68 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 		<script>
 
+
+
+
+
+///
+
+// che
+$(document).ready(function() {
+    const citiesByState = {
+        "Punjab": ["Ludhiana", "Amritsar", "Zirakpur", "Rajpura", "Chandigarh", "Barnala", "Bhawanigarh", "Nawanshahr", "Dera Bassi", "Raikot", "Ferozepur", "Gharaunda", "Anandpur Sahib", "Moga", "Nangal", "Sunam", "Talwara", "Kotkapura", "Jagadhri", "Malerkotla", "Kapurthala", "Radaur", "Dhuri", "Rampura Phul", "Moonak", "Nabha", "Sirhind", "Gobindgarh", "Malout", "Khanna", "Pundri", "Kurukshetra", "Hisar", "Ambala City", "Jalandhar"],
+        "Haryana": ["Faridabad", "Karnal", "Safidon", "Ladwa", "Mehatpur", "Ismailabad", "Mohali", "Kaithal", "Phagwara", "Kurali", "Hoshiarpur", "Panchkula", "Barwala", "Assandh", "Yamunanagar", "Una", "Kala Amb", "Morinda", "Patiala", "Markanda", "Ner Chowk", "Ahmedgarh", "Parwanoo"],
+        "Delhi": ["Delhi"]
+    };
+
+    // Function to populate city dropdown based on selected state
+    function populateCities(state) {
+        $("#city-select").empty().append('<option value="">Select City</option>');
+        if (state && citiesByState[state]) {
+            citiesByState[state].forEach(function(city) {
+                $("#city-select").append(`<option value="${city}">${city}</option>`);
+            });
+        }
+    }
+
+    // Populate city dropdown when state is selected
+    $("#state-select").on("change", function() {
+        const selectedState = $(this).val();
+        populateCities(selectedState);
+    });
+
+    // Function to filter and populate table based on selected city
+    function filt() {
+
+		console.log("hello");
+        const selectedState = $("#state-select").val();
+        const selectedCity = $("#city-select").val();
+        const filteredAddresses = add.filter(item => item.city === selectedCity);
+        const tableBody = $("#address-table tbody");
+        tableBody.empty(); // Clear existing rows
+
+        // Add rows for filtered addresses
+        filteredAddresses.forEach(address => {
+            const row = $("<tr></tr>");
+            row.html(`
+                <td>${address.address}</td>
+                <td>${address.city}</td>
+                <td>${address.contact}</td>
+            `);
+            tableBody.append(row);
+        });
+
+        // Show the table
+        $("#address-table").css("display", "table");
+    }
+    
+    // Event listener for search button
+    $("#search-button").on("click", function() {
+        filt();
+    });
+});
+
+//ch
 			/*
 			Map Settings
 
@@ -515,7 +658,7 @@
 			// Map Markers
 			
 /////////////////////////////////////////////////////////////////////////////////
-			const inputField = document.getElementById('inputField');
+ const inputField = document.getElementById('inputField');
   const hiddenDiv = document.getElementById('hiddenDiv');
   const addr = document.querySelector('.addr');
   const table = document.querySelector('.table');
@@ -548,24 +691,10 @@ const tableHead = document.querySelector('.table thead');
 postData('http://localhost:3000/send-email',data)
   }
 
-// let city=["Delhi", "Amritsar", "Ludhiana", "Chandigarh", "Kundli", "Zirakpur","Faridabad"]
-let city=["Delhi", "Amritsar", "Ludhiana", "Chandigarh", "Zirakpur","Faridabad","Haryana","Kurali","Malerkotla","Morinda","Yamunanagar","Una","Jagadhri","Kala Amb","Phillaur",
-"Patiala","Markanda","Radaur","Dhuri","Rampura Phul","Moonak","Nabha","Sirhind","Ahmedgarh","Gobindgarh","Malout","Khanna","Pundri","Panipat","Kurukshetra","Hisar",
-"Parwanoo","Jalandhar","Ambala City","Ner Chowk","Barnala","Karnal","Safidon ","Nawanshahr","Bhawanigarh","Ambala Cantt.","Raikot","Dera Bassi","Ferozepur","Gharaunda","Ladwa","Moga","Tahliwal","Anandpur Sahib",
-"Ismailabad","Mehatpur","Pehowa","Nangal","Dharamkanta","Mohali","Meerut ","Baddi","Goraya","Kaithal","Phagwara","Hoshiarpur","Panchkula","Barwala",
-"Sunam","Bathinda","Assandh","Lalru","Kotkapura","Talwara" ]
-for (let i = 0; i < city.length; i++) {
-	const newElement = document.createElement('div');
-	newElement.textContent = city[i]
-	newElement.classList.add('city');
-	
-	hiddenDiv.appendChild(newElement);
-	newElement.addEventListener("click",()=>{
-		inputField.value=city[i]
-		console.log(inputField.value);
-		hiddenDiv.style.display="none" 
-	})
-}
+
+
+
+
 // const add=[
 // 	    {address:"Plot No. 120, Transport Nagar, Ludhiana",                   city:"Ludhiana",contact:"7888529411"},
 //         {address:"Plot No. 21, Transport Nagar, Jahajgarh, Amritsar",         city:"Amritsar",contact:"9417422577"},
@@ -710,62 +839,67 @@ const add=[
     }
 
 	]
-let give=[]
+
+
+
+	let give=[]
 
 	
 
 
- function show(){
-	if (hiddenDiv.style.display === 'none') {
-      hiddenDiv.style.display = 'block';
-    } else {
-      hiddenDiv.style.display = 'none';
-    }
-  }
+//  function show(){
+// 	if (hiddenDiv.style.display === 'none') {
+//       hiddenDiv.style.display = 'block';
+//     } else {
+//       hiddenDiv.style.display = 'none';
+//     }
+//   }
 
-  function filt(){
-	addr.innerHTML=''
-	give=[]
-	console.log("bye");
+//   function filt(){
+// 	addr.innerHTML=''
+// 	give=[]
+// 	console.log("bye");
 
 
- give=add.map((i)=>{
-	if(i.city.includes((inputField.value).toLowerCase()) || i.city.includes((inputField.value)) ){
-		console.log("hi");
-		return(i)
-	}
-	else{
-		return(undefined)
-	}
+//  give=add.map((i)=>{
+// 	if(i.city.includes((inputField.value).toLowerCase()) || i.city.includes((inputField.value)) ){
+// 		console.log("hi");
+// 		return(i)
+// 	}
+// 	else{
+// 		return(undefined)
+// 	}
 	
- })
- console.log(give);
+//  })
+//  console.log(give);
  let filteredArray = give.filter(value => value !== undefined);
  console.log(filteredArray);
- filteredArray.map((i)=>{
-	const newElement = document.createElement('tr');
-	newElement.style.height="40px"
-	newElement.innerHTML +=`
-		                        <td width="550px">${i.address}</td>
-								<td>${i.city}</td>
-								<td>${i.contact}</td>
-						  `
-				addr.appendChild(newElement)
-})
-table.style.display="table"
+//  filteredArray.map((i)=>{
+// 	const newElement = document.createElement('tr');
+// 	newElement.style.height="40px"
+// 	newElement.innerHTML +=`
+// 		                        <td width="550px">${i.address}</td>
+// 								<td>${i.city}</td>
+// 								<td>${i.contact}</td>
+// 						  `
+// 				addr.appendChild(newElement)
+// })
+// table.style.display="table"
 
 
 
-give.map((i)=>{
-	const newElement = document.createElement('tr');
-	newElement.style.height="40px"
-	newElement.innerHTML +=`
-		                        <td>${i.address}</td>
-								<td>${i.email}</td>
-								<td>${i.contact}</td>
-						  `
-				addr.appendChild(newElement)
-})
+// give.map((i)=>{
+// 	const newElement = document.createElement('tr');
+// 	newElement.style.height="40px"
+// 	newElement.innerHTML +=`
+// 		                        <td>${i.address}</td>
+// 								<td>${i.email}</td>
+// 								<td>${i.contact}</td>
+// 						  `
+// 				addr.appendChild(newElement)
+// })
+
+
 //checker
  // Toggle the visibility
  if (filteredArray.length > 0) {
@@ -777,8 +911,6 @@ give.map((i)=>{
             }
 // Show the table
 table.style.display = 'block';
-  }
-  
   
 const add1 = [
             { address: "Plot No. 120, Transport Nagar, Ludhiana", city: "Ludhiana", contact: "7888529411" },
@@ -786,9 +918,9 @@ const add1 = [
             { address: "Near Ramada Hotel, Ambala Chandigarh Highway, Zirakpur.", city: "Zirakpur", contact: "8968421077" },
             { address: "Gagan Chowk Bye-Pass, NH-1, Rajpura", city: "Rajpura", contact: "9417282699" },
             { address: "Plot No. 10, Transport Area, Sector-26, Chandigarh", city: "Chandigarh", contact: "9417191006" },
-            { address: "4144-45, Naya Bazar, Delhi", city: "Delhi", contact: "7011719699,011-46013881" },
-            { address: "AG-16, Sanjay Gandhi Transport Nagar, Delhi", city: "Delhi", contact: "9899656120,011-43549401" },
-            { address: "Shop No. 6, CSC Market, Punjabi Bagh Transport Area, Delhi", city: "Delhi", contact: "7011719699,011-47092827" },
+            { address: "4144-45, Naya Bazar, Delhi", city: "Delhi", contact: "7011719699, 011-46013881" },
+            { address: "AG-16, Sanjay Gandhi Transport Nagar, Delhi", city: "Delhi", contact: "9899656120, 011-43549401" },
+            { address: "Shop No. 6, CSC Market, Punjabi Bagh Transport Area, Delhi", city: "Delhi", contact: "7011719699, 011-47092827" },
             { address: "Kundli Border, Near Canara Bank, Kundli", city: "Kundli", contact: "9306735473" },
             { address: "Pillar No. 692, Opposite Metro, Old Faridabad", city: "Faridabad", contact: "9818691997" },
             { address: "Ghee Mandi, Near Shiv Dulari Van", city: "Amritsar", contact: "9417422577" },
