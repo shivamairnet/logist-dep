@@ -394,7 +394,7 @@
 					<div class="container pt-5 mt-3 pb-3" >
 						<div class="row" id="ourofficesfocus">
 							<div class="col">
-								<table id="address-table" class="table" style="width: 100%; text-align: center; overflow: auto; display: none;">
+								<table id="address-table" class="table" style="width: 100%; text-align: center; overflow: auto;display:none ">
 									<thead>
 									  <tr>
 										<th>Address</th>
@@ -609,10 +609,10 @@ $(document).ready(function() {
             });
         }
 
-		$("#address-table tbody").empty();
-            $("#address-table").css("display", "none");
-            $("#generate-pdf").css("display", "none").prop("disabled", true);
-            searchClicked = false; // Reset the search clicked flag
+		// $("#address-table tbody").empty();
+        //     $("#address-table").css("display", "none");
+        //     $("#generate-pdf").css("display", "none").prop("disabled", true);
+        //     searchClicked = false; // Reset the search clicked flag
     }
 
     // Populate city dropdown when state is selected
@@ -960,15 +960,15 @@ const add=[
 
 //checker
  // Toggle the visibility
- if (filteredArray.length > 0) {
-                table.style.display = "table";
-                tableHead.style.display = "table-header-group";
-            } else {
-                table.style.display = "none";
-                tableHead.style.display = "none";
-            }
+//  if (filteredArray.length > 0) {
+//                 table.style.display = "table";
+//                 tableHead.style.display = "table-header-group";
+//             } else {
+//                 table.style.display = "none";
+//                 tableHead.style.display = "none";
+//             }
 // Show the table
-table.style.display = 'block';
+// table.style.display = 'block';
   
 const add1 = [
             { address: "Plot No. 120, Transport Nagar, Ludhiana", city: "Ludhiana", contact: "7888529411" },
