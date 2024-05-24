@@ -55,12 +55,13 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+		
 
 <!-- che -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/jspdf.plugin.autotable.min.js"></script>
 
    <!-- Include Select2 -->
    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet" />
@@ -196,9 +197,7 @@
     }
    
 
-    #generate-pdf {
-        margin-top: 20px; /* Add margin at the top of the download button */
-    }
+   
 
 	label {
     margin-bottom: 5px; /* Add some space below the labels */
@@ -215,7 +214,8 @@
     display: flex;
     justify-content: center; /* Center the button horizontally */
     margin-top: 10px; /* Add some space above the button */
-  }
+	gap: 30px;
+}
 	</style>
 	<body data-plugin-page-transition>
 
@@ -379,8 +379,12 @@
 				</div>
 
 				<div class="button-container">
+					<button id="search-button" onclick="filt()" class="btn btn-primary border-0 text-3 font-weight-semi-bold btn-px-5 d-md-inline-block" style="height: 40px;">Search</button>
+                   	<button id="generate-pdf" class="btn btn-primary border-0 text-3 font-weight-semi-bold btn-px-5 d-md-inline-block" style="height: 40px; "onclick="generatePDF()">Download</button>
+						<!-- <div class="three" style="margin-top: 10px; display: flex; justify-content: flex-end;">
+							<button id="generate-pdf" class="btn btn-tertiary border-0 text-3 font-weight-semi-bold btn-px-3 d-md-inline-block" style="height: 40px;">Download</button>
+						</div> -->
 					
-					<button id="search-button" onclick="filt()" class="btn btn-tertiary border-0 text-3 font-weight-semi-bold btn-px-5 d-md-inline-block" style="height: 40px;">Search</button>
 				</div>
 
 
@@ -389,7 +393,7 @@
 					<div class="container pt-5 mt-3 pb-3" >
 						<div class="row" id="ourofficesfocus">
 							<div class="col">
-								<table class="table" style="width: 100%; text-align: center; overflow: auto; display: none;">
+								<table id="address-table" class="table" style="width: 100%; text-align: center; overflow: auto; display: none;">
 									<thead>
 									  <tr>
 										<th>Address</th>
@@ -405,11 +409,7 @@
 							</div>
 						</div>
 					</div>
-
 					
-					<!-- <div class="three" style="margin-top: 10px; display: flex; justify-content: flex-end;">
-						<button id="generate-pdf" class="btn btn-tertiary border-0 text-3 font-weight-semi-bold btn-px-3 d-md-inline-block" style="height: 40px;">Download</button>
-					</div> -->
 				</section>
 			</div>
 			   </div>
@@ -606,6 +606,11 @@ $(document).ready(function() {
                 $("#city-select").append(`<option value="${city}">${city}</option>`);
             });
         }
+
+		$("#address-table tbody").empty();
+            $("#address-table").css("display", "none");
+            $("#generate-pdf").css("display", "none").prop("disabled", true);
+            searchClicked = false; // Reset the search clicked flag
     }
 
     // Populate city dropdown when state is selected
@@ -615,34 +620,85 @@ $(document).ready(function() {
     });
 
     // Function to filter and populate table based on selected city
-    function filt() {
+	let searchClicked = false;
+	function filt() {
 
 		console.log("hello");
         const selectedState = $("#state-select").val();
         const selectedCity = $("#city-select").val();
         const filteredAddresses = add.filter(item => item.city === selectedCity);
+		// console.log(filteredAddresses);
         const tableBody = $("#address-table tbody");
-        tableBody.empty(); // Clear existing rows
+		tableBody.empty(); // Clear existing rows
 
         // Add rows for filtered addresses
         filteredAddresses.forEach(address => {
             const row = $("<tr></tr>");
+			
             row.html(`
                 <td>${address.address}</td>
                 <td>${address.city}</td>
                 <td>${address.contact}</td>
             `);
+
+			console.log(row);
             tableBody.append(row);
+			
         });
 
         // Show the table
+		if (filteredAddresses.length > 0) {
         $("#address-table").css("display", "table");
+        $("#generate-pdf").css("display", "inline-block");
+    } else {
+        $("#address-table").css("display", "none");
+        $("#generate-pdf").css("display", "none");
     }
-    
-    // Event listener for search button
-    $("#search-button").on("click", function() {
-        filt();
+	searchClicked = true;
+    }
+
+    function generatePDF() {
+		if (!searchClicked) {
+                alert("Please search for a city first!");
+                return;
+            }
+    // Fetch the table
+    const doc = new jspdf.jsPDF();
+    const table = document.getElementById("address-table");
+	if (!table || !table.querySelectorAll("tr").length) {
+        alert("The table is empty!");
+        return;	
+    }
+    // Extract the table content
+    let content = [];
+    const rows = table.querySelectorAll("tr");
+    rows.forEach(row => {
+        const rowData = [];
+        const cols = row.querySelectorAll("td, th");
+        cols.forEach(col => rowData.push(col.innerText));
+        content.push(rowData);
+		// console.log(content);
     });
+
+    // Create the PDF
+    doc.autoTable({
+        head: [content[0]], // Table headers
+        body: content.slice(1) // Table rows
+    });
+
+    // Save the PDF
+	doc.save("addresses.pdf");
+	
+	
+}
+    // Event listener for search button
+    $("#search-button").on("click", function(){
+	filt();
+});
+    $("#generate-pdf").on("click", function(){
+		generatePDF();
+});
+
 });
 
 //ch
