@@ -252,7 +252,8 @@
             background-position: center;
         } */
 
-	.background-container {
+	
+.background-container {
     position: relative;
     height: 100vh;
     background-image: url('img/about/ship.jpg'); /* Replace with your image path */
@@ -262,27 +263,27 @@
     justify-content: flex-end;
     align-items: center;
 }
-        .grid-container {
-            display: grid;
-			
-            grid-template-columns: repeat(2, minmax(auto, 370px));
-            gap: 20px; 
-            padding: 20px;
-            position: absolute;
-            bottom: 0;
-            /* width: 100%; */
-			width: auto;
-            justify-content: end; 
-			height:max-content;
-        }
-        .grid-item {
-            width: 100%; /* Adjust width to fit the grid column */
-            height: 230px; /* Adjusted height */
-            transition: transform 0.3s;
-            background: rgba(255, 255, 255, 0.8); /* Adding a white background with opacity for better readability */
-            border-radius: 8px;
-            overflow: hidden;   
-        }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 370px));
+    gap: 20px; 
+    padding: 20px;
+    position: relative; /* Change to relative */
+    /* width: 100%; */
+    width: auto;
+    justify-content: flex-end; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: max-content;
+}
+.grid-item {
+    width: 100%; /* Adjust width to fit the grid column */
+    height: 250px; /* Adjusted height */
+    transition: transform 0.3s;
+    background: rgba(255, 255, 255, 0.8); /* Adding a white background with opacity for better readability */
+    border-radius: 8px;
+    overflow: hidden;
+}
         .grid-item:hover {
             transform: translateY(-10px);
         }
@@ -343,21 +344,26 @@
         .transition-3ms {
             transition: all 0.3s ease;
         }
-        .overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 40px; /* Adjusted position to the right */
-            transform: translateY(-50%);
-            color: white;
-            font-size: 3rem;
-            font-weight: bold;
-            z-index: 1;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            white-space: nowrap;
-            line-height: 1.5; /* Added line-height for spacing */
-        }
+		.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 40px; /* Adjusted position to the right */
+    transform: translateY(-50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    white-space: nowrap;
+    line-height: 1.5;
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(2, auto);
+    text-align: center;
+}
+
 
 		
 		@media (max-width: 480px) {
@@ -630,7 +636,7 @@
 					<h3 class="overlay-text">
 						Refined Logistics,<br><span style="display:inline-block; margin-top:30px;">Seamless Operations</span>
 					</h3>
-					<div class="grid-container">
+					<div class="grid-container" style="margin-top: 10px !important;">
 						<div class="grid-item">
 							<div class="anim-hover-translate-top-10px transition-3ms">
 								<div class="card">
