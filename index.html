@@ -81,10 +81,10 @@
 	font: 40px;
 }
 		@media only screen and (max-width: 600px) {
-			.log me-lg-5{
+			/* .log me-lg-5{
 				height: 75px !important;
 				width: 100px !important;
-			}
+			} */
 			.txt{
 				font-size: 18px !important;
 			}
@@ -144,7 +144,7 @@
     transform: none !important; /* Override any existing rotation */
 }
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
     #header .header-logo img {
         max-width: 245px;
         height: auto;
@@ -152,10 +152,10 @@
 
 	@media (max-width: 576px) {
     .log {
-        display: block; /* Visible on medium and smaller devices */
-        margin-top: 10px; /* Adjust margin top as needed */
+        display: block; 
+        margin-top: 10px; 
     }
-}
+} */}
 /* Ensure the cards and carousel are properly spaced on mobile */
 @media (max-width: 576px) {
 	.owl-carousel .card {
@@ -182,7 +182,7 @@
 
 
 
-		}
+		
 		.cat-item {
         position: relative;
         display: inline-block;
@@ -426,8 +426,18 @@
         transform: translateX(-50%);
         display: none;
     }
-}
 
+	.log-mobile {
+        display: block; /* Show the mobile logo on small screens */
+        margin-top: 10px;
+		margin-left: 10px !important; /* Adjust margin top as needed */
+    }
+
+
+}
+/* .log-mobile {
+    display: none;
+} */
 	</style>
 	<body data-plugin-page-transition>
 
@@ -461,7 +471,7 @@
 				  <!-- Contact information, social media icons, and language dropdown for small screens -->
 				  <div class="d-flex flex-wrap align-items-center justify-content-between d-lg-none">
 					<div class="header-contact-info">
-						<a class="text-color-default text-color-hover-primary text-2 me-3 mb-2" href="#">+919815876777</a>
+						<a class="text-color-default text-color-hover-primary text-2 me-3 mb-2" href="#">+919815876777, +919815676777</a>
 						<!-- <a class="text-color-default text-color-hover-primary text-2 me-3 mb-2" href="#">thebmt.in</a>
 						<span class="text-color-default text-color-hover-primary text-2 mb-2">Mon — Sat: 9AM — 6PM</span> -->
 					</div>
@@ -573,11 +583,16 @@
 									<div class="hstack h-100 w-100">
 										<div class="h-100 w-100 w-xl-auto">
 											<!-- <div class="header-nav header-nav-links h-100 justify-content-end justify-content-lg-start me-4 me-lg-0 ms-lg-3"> -->
-												<div class="header-nav header-nav-links h-100 justify-content-end  me-4 me-lg-4 ms-lg-0">
-
+												<div class="header-nav header-nav-links h-80 justify-content-end  me-4 me-lg-4 ms-lg-0">
+													<img class="log-mobile me-auto" alt="Porto" width="100" height="75" src="img/about/logothe4.jpg">
 
 <!-- Language Dropdown for Mobile -->
-<div class="d-lg-none mb-3 ms-auto">
+
+<div class="d-lg-none mb-3 d-flex align-items-center">
+	<!-- che -->
+	
+	<!-- <img class="log-mobile" mt=10 alt="Porto" width="80" height="70" src="img/about/logothe4.jpg"> -->
+	<div class="ms-auto">
 	<ul class="nav nav-pills">
 		<li class="nav-item dropdown">
 			<a class="nav-link text-2 p-0 text-color-default" href="#" role="button" id="dropdownLanguageMobile" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -592,7 +607,7 @@
 		</li>
 	</ul>
 </div>
-
+</div>
 
 
 												<div class="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-text-capitalize header-nav-main-text-size-4 header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover header-nav-main-effect-5">
